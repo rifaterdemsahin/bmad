@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Renderer - Paperclip Co.</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Mermaid.js for Diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        .markdown-body {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="markdown-renderer.html?file=architecture.md">Architecture</a></li>
+            <li><a href="markdown-renderer.html?file=.bmad-core/agents/analyst.md">Analyst</a></li>
+            <li><a href="markdown-renderer.html?file=.bmad-core/agents/architect.md">Architect</a></li>
+            <li><a href="markdown-renderer.html?file=README.md">README</a></li>
+        </ul>
+    </nav>
+
+    <div id="content" class="markdown-body">
+        Loading document...
+    </div>
+
+    <script>
+        mermaid.initialize({ startOnLoad: false });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const fileName = urlParams.get('file') || 'README.md';
+
+        fetch(fileName)
+            .then(response => {
+                if (!response.ok) throw new Error('File not found');
+                return response.text();
+            })
+            .then(text => {
+                const contentDiv = document.getElementById('content');
+                // Clean up YAML frontmatter for display if needed
+                const cleanText = text.replace(/^---[\s\S]*?---/, '');
+                contentDiv.innerHTML = marked.parse(cleanText);
+
+                // Initialize Mermaid after content is loaded
+                const mermaidDivs = contentDiv.querySelectorAll('pre code.language-mermaid');
+                mermaidDivs.forEach((codeBlock, i) => {
+                    const mermaidDiv = document.createElement('div');
+                    mermaidDiv.className = 'mermaid';
+                    mermaidDiv.innerHTML = codeBlock.innerText;
+                    codeBlock.parentElement.replaceWith(mermaidDiv);
+                });
+
+                mermaid.run();
+            })
+            .catch(err => {
+                document.getElementById('content').innerHTML = `<h1>Error</h1><p>${err.message}</p><a href="index.html">Back to Home</a>`;
+            });
+    </script>
+</body>
+</html>
