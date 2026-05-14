@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'data/business.json',
         'data/model.json',
         'data/architecture.json',
-        'data/design.json'
+        'data/design.json',
+        'data/agents.json'
     ];
 
     Promise.all(dataSources.map(url => fetch(url).then(res => res.json())))
