@@ -12,8 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
         'data/model.json',
         'data/architecture.json',
         'data/design.json',
-        'data/agents.json'
+        'data/agents.json',
+        'data/stakeholders.json'
     ];
+
+    // ROI Model Logic
+    const ROI_MODEL = {
+        baseCost: 0.05,
+        calculateROI: (wirePrice, productionVolume) => {
+            const unitPrice = 0.15;
+            const costPerUnit = wirePrice + ROI_MODEL.baseCost;
+            const margin = (unitPrice - costPerUnit) * productionVolume;
+            return margin.toFixed(2);
+        }
+    };
+
+    window.runROIModel = () => {
+        const wirePrice = Math.random() * 0.03 + 0.01;
+        const volume = 1000000;
+        const result = ROI_MODEL.calculateROI(wirePrice, volume);
+        logToConsole(`ROI Model: Wire Price $${wirePrice.toFixed(4)} | Volume: ${volume} | Expected Margin: $${result}`);
+    };
 
     Promise.all(dataSources.map(url => fetch(url).then(res => res.json())))
         .then(dataArrays => {

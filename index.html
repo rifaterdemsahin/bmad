@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="top-menu">
+        <ul>
+            <li><a href="#search-section">Autocomplete</a></li>
+            <li><a href="#bmad-overview">BMAD Stages</a></li>
+            <li><a href="#model-demonstration">ROI Model</a></li>
+            <li><a href="#hermes-agent">Hermes Status</a></li>
+        </ul>
+    </nav>
+
     <header>
         <h1>📎 Paperclip Co. <span class="subtitle">BMAD-METHOD™ Enterprise Portal</span></h1>
     </header>
@@ -15,8 +24,16 @@
         <section id="search-section">
             <h2>Enterprise & Agent Autocomplete</h2>
             <div class="search-container">
-                <input type="text" id="autocomplete-input" placeholder="Search Agents (Mary, Architect...), Business, Models...">
+                <input type="text" id="autocomplete-input" placeholder="Search Agents, Stakeholders (Chidi, Rifat), Business...">
                 <div id="autocomplete-results" class="results-dropdown"></div>
+            </div>
+        </section>
+
+        <section id="model-demonstration">
+            <h2>ROI Model Demonstration</h2>
+            <div class="model-box">
+                <p>Run the predictive ROI model to analyze production margins based on current wire prices.</p>
+                <button onclick="window.runROIModel()">Run Model Execution</button>
             </div>
         </section>
 
