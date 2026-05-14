@@ -1,0 +1,5 @@
+[
+    {"id": "m1", "name": "Standard Zinc-Plated Model", "category": "Model", "details": "The classic 33mm paperclip."},
+    {"id": "m2", "name": "Heavy Duty Vinyl Coated", "category": "Model", "details": "Colorful, non-slip clips for large bundles."},
+    {"id": "m3", "name": "Precision Gem Clip", "category": "Model", "details": "Serrated finish for maximum grip."}
+]

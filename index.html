@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paperclip Co - Enterprise BMAD Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📎 Paperclip Co. <span class="subtitle">Enterprise BMAD Portal</span></h1>
+    </header>
+    
+    <main>
+        <section id="search-section">
+            <h2>Enterprise Autocomplete</h2>
+            <div class="search-container">
+                <input type="text" id="autocomplete-input" placeholder="Search Business, Models, Architecture, or Design...">
+                <div id="autocomplete-results" class="results-dropdown"></div>
+            </div>
+        </section>
+
+        <section id="hermes-agent">
+            <h2>Hermes Agent Status</h2>
+            <div class="agent-console" id="agent-console">
+                <p class="system-msg">> Hermes Agent initialized.</p>
+                <p class="system-msg">> Monitoring enterprise data sources...</p>
+            </div>
+            <button id="demonstrate-btn">Demonstrate Data Sync</button>
+        </section>
+
+        <section id="bmad-overview">
+            <div class="bmad-grid">
+                <div class="bmad-card" id="business-card">
+                    <h3>Business</h3>
+                    <p>Strategic Growth Plan 2026</p>
+                    <small>Focus on high-tensile market expansion</small>
+                </div>
+                <div class="bmad-card" id="model-card">
+                    <h3>Model</h3>
+                    <p>Standard Zinc-Plated</p>
+                    <small>The classic 33mm precision clip</small>
+                </div>
+                <div class="bmad-card" id="architecture-card">
+                    <h3>Architecture</h3>
+                    <p>Global Logistics Hub</p>
+                    <small>Node: Rotterdam Central</small>
+                </div>
+                <div class="bmad-card" id="design-card">
+                    <h3>Design</h3>
+                    <p>Minimalist Aesthetic</p>
+                    <small>Matte finish, modern ergonomics</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Paperclip Co. - Built with BMAD Method</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

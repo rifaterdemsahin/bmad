@@ -1,0 +1,5 @@
+[
+    {"id": "a1", "name": "Global Logistics Hub", "category": "Architecture", "details": "Centralized distribution node in Rotterdam."},
+    {"id": "a2", "name": "Automated Bending Logic", "category": "Architecture", "details": "Real-time control systems for wire forming machines."},
+    {"id": "a3", "name": "Inventory Mesh Network", "category": "Architecture", "details": "Decentralized tracking for raw materials."}
+]
