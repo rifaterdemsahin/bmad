@@ -46,6 +46,30 @@
     </header>
     
     <main>
+        <section id="bmad-visual-section">
+            <h2>🔄 From Chaos to Control: The BMAD Evolution</h2>
+            <div class="bmad-visual">
+                <div class="bmad-visual-thumb" onclick="openModal()">
+                    <img src="bmad_before_after.jpeg" alt="BMAD Before and After - Old Abstraction Trap vs Future of BMAD">
+                    <p class="click-hint">🔍 Click to enlarge</p>
+                </div>
+                <div class="bmad-visual-text">
+                    <p>
+                        This illustration depicts the evolution from the <strong>"Old Abstraction Trap"</strong> to a futuristic, governed approach known as the <strong>BMAD Method</strong>.
+                    </p>
+                    <p>
+                        On the left, the visualization shows the <strong>Loss of Control</strong> inherent in unstructured AI development, where high-level prompts enter a <strong>"Black Box"</strong> that results in tangled, high-risk codebases characterized by technical debt and poor traceability. This chaotic environment forces developers into an iterative "guessing game" of prompt refinement, sacrificing precision and accountability for the sake of speed.
+                    </p>
+                    <p>
+                        The right side showcases <strong>"The Future of BMAD,"</strong> a structured and collaborative AI engineering framework designed for enterprise-grade scalability. This futuristic model utilizes a <strong>BMAD Agentic Team</strong>—comprising roles like Analysts, Architects, and Scrum Masters—to generate versioned artifacts such as Product Briefs and Architecture Documents.
+                    </p>
+                    <p>
+                        Central to this transition is the <strong>"Control Manifest,"</strong> which allows human developers to actively steer AI co-pilots through a governed pull request lifecycle. This ensures that the final codebase is not only scalable and predictable but also serves as an auditable <strong>"continuous compliance ledger"</strong> for the organization.
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <section id="search-section">
             <h2>Enterprise & Agent Autocomplete</h2>
             <div class="search-container">
@@ -73,11 +97,37 @@
 
     </main>
 
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal(event)">&times;</button>
+            <img src="bmad_before_after.jpeg" alt="BMAD Before and After - Full Size">
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 Paperclip Co. - Built with BMAD Method 📎✨</p>
         <p><em>"Transforming legacy enterprises into agentic AI architectures, one paperclip at a time."</em></p>
     </footer>
 
     <script src="app.js"></script>
+    <script>
+        function openModal() {
+            document.getElementById('image-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(event) {
+            if (event.target.classList.contains('modal-overlay') || event.target.classList.contains('modal-close')) {
+                document.getElementById('image-modal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.getElementById('image-modal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 </body>
 </html>
