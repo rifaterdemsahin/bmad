@@ -1,5 +1,5 @@
 [
-    {"id": "m1", "name": "Standard Zinc-Plated Model", "category": "Model", "details": "The classic 33mm paperclip."},
-    {"id": "m2", "name": "Heavy Duty Vinyl Coated", "category": "Model", "details": "Colorful, non-slip clips for large bundles."},
-    {"id": "m3", "name": "Precision Gem Clip", "category": "Model", "details": "Serrated finish for maximum grip."}
+    {"id": "m1", "name": "Auto Complete Trained Model", "category": "Model", "details": "Enterprise-trained autocomplete powered by BMAD agent intelligence."},
+    {"id": "m2", "name": "ROI Predictive Engine", "category": "Model", "details": "Real-time margin analysis and production forecasting."},
+    {"id": "m3", "name": "Hermes Orchestration Model", "category": "Model", "details": "Multi-agent workflow coordination and data sync."}
 ]

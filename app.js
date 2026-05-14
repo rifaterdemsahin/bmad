@@ -99,10 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
         demonstrateBtn.disabled = true;
         
         const steps = [
-            'Analyzing wire supply chain patterns...',
-            'Evaluating market sentiment for high-tensile clips...',
-            'Optimizing bending logic for ROI...',
-            'Fetching strategic insights from Hermes Agent...'
+            'Analyzing enterprise data model patterns...',
+            'Evaluating Auto Complete by trained models performance...',
+            'Optimizing BMAD agent workflows for ROI...',
+            'Fetching strategic insights from Hermes Orchestrator...'
         ];
 
         let i = 0;

@@ -1,5 +1,5 @@
 [
-    {"id": "d1", "name": "Minimalist Clip Aesthetic", "category": "Design", "details": "Clean lines and matte finish for modern offices."},
-    {"id": "d2", "name": "Ergonomic Box Dispenser", "category": "Design", "details": "Magnetic top for easy one-handed access."},
-    {"id": "d3", "name": "Eco-Friendly Packaging", "category": "Design", "details": "Recyclable cardboard with soy-based inks."}
+    {"id": "d1", "name": "Enterprise Dashboard UI", "category": "Design", "details": "Clean, modern interface for BMAD data exploration."},
+    {"id": "d2", "name": "Autocomplete Dropdown", "category": "Design", "details": "Intuitive search with real-time agent-stakeholder-business results."},
+    {"id": "d3", "name": "Agent Console", "category": "Design", "details": "Real-time orchestrator log and system feedback panel."}
 ]

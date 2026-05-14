@@ -33,11 +33,25 @@
 <body>
     <nav class="top-menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="markdown-renderer.html?file=architecture.md">Architecture</a></li>
-            <li><a href="markdown-renderer.html?file=.bmad-core/agents/analyst.md">Analyst</a></li>
-            <li><a href="markdown-renderer.html?file=.bmad-core/agents/architect.md">Architect</a></li>
-            <li><a href="markdown-renderer.html?file=README.md">README</a></li>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="markdown-renderer.html?file=architecture.md">🏗️ Architecture</a></li>
+            <li class="dropdown">
+                <a href="#">🤖 Agents ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/analyst.md">🧠 Analyst</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/architect.md">🏗️ Architect</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/bmad-orchestrator.md">⚡ Orchestrator</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">📝 Docs ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="markdown-renderer.html?file=README.md">📘 README</a></li>
+                    <li><a href="markdown-renderer.html?file=opencode.md">🚀 OpenCode</a></li>
+                    <li><a href="markdown-renderer.html?file=claude.md">🎯 Claude</a></li>
+                    <li><a href="markdown-renderer.html?file=gemini.md">✨ Gemini</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 

@@ -1,7 +1,7 @@
 [
-    {"id": "ag1", "name": "Mary (Analyst)", "category": "Agent", "details": "Market research and competitive analysis."},
-    {"id": "ag2", "name": "Architect", "category": "Agent", "details": "Technical systems and manufacturing logic."},
-    {"id": "ag3", "name": "Hermes (Orchestrator)", "category": "Agent", "details": "Workflow coordination and agent management."},
-    {"id": "ag4", "name": "Product Manager", "category": "Agent", "details": "PRDs, epics, and user stories."},
-    {"id": "ag5", "name": "Developer", "category": "Agent", "details": "Implementation and bug fixing."}
+    {"id": "ag1", "name": "🧠 Mary (Analyst)", "category": "Agent", "details": "Market research and competitive analysis for enterprise data models."},
+    {"id": "ag2", "name": "🏗️ Architect", "category": "Agent", "details": "Technical systems and BMAD architecture design for clients."},
+    {"id": "ag3", "name": "⚡ Hermes (Orchestrator)", "category": "Agent", "details": "Workflow coordination and agent management across enterprise deployments."},
+    {"id": "ag4", "name": "📋 Product Manager", "category": "Agent", "details": "PRDs, epics, and user stories for Auto Complete by trained models."},
+    {"id": "ag5", "name": "💻 Developer", "category": "Agent", "details": "Implementation and bug fixing for BMAD showcase systems."}
 ]
