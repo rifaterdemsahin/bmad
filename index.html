@@ -9,16 +9,32 @@
 <body>
     <nav class="top-menu">
         <ul>
-            <li><a href="#search-section">Autocomplete</a></li>
+            <li><a href="index.html">Dashboard</a></li>
             <li><a href="markdown-renderer.html?file=architecture.md">Architecture</a></li>
-            <li><a href="markdown-renderer.html?file=.bmad-core/agents/analyst.md">BMAD Agents</a></li>
-            <li><a href="#model-demonstration">ROI Model</a></li>
-            <li><a href="#hermes-agent">Hermes Status</a></li>
+            <li class="dropdown">
+                <a href="#">BMAD Agents ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/analyst.md">Mary (Analyst)</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/architect.md">Architect</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/bmad-orchestrator.md">Orchestrator</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Data Sources ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="data/business.json">Business</a></li>
+                    <li><a href="data/model.json">Models</a></li>
+                    <li><a href="data/architecture.json">Architecture</a></li>
+                    <li><a href="data/design.json">Design</a></li>
+                    <li><a href="data/stakeholders.json">Stakeholders</a></li>
+                </ul>
+            </li>
+            <li><a href="markdown-renderer.html?file=README.md">README</a></li>
         </ul>
     </nav>
 
     <header>
-        <h1>📎 Paperclip Co. <span class="subtitle">BMAD-METHOD™ Enterprise Portal</span></h1>
+        <h1>📎 Paperclip Co. <span class="subtitle">Enterprise AI Transformation Consultancy</span></h1>
     </header>
     
     <main>
