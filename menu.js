@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="markdown-renderer.html?file=.bmad-core/agents/analyst.md">🧠 Mary (Analyst)</a></li>
                     <li><a href="markdown-renderer.html?file=.bmad-core/agents/architect.md">🏗️ Architect</a></li>
                     <li><a href="markdown-renderer.html?file=.bmad-core/agents/bmad-orchestrator.md">⚡ Orchestrator</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/cto.md">👨‍💼 CTO</a></li>
                 </ul>
             </li>
             <li class="dropdown">
