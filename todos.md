@@ -109,6 +109,41 @@ bmad-in-a-box/
 
 ---
 
+## Community & Substack 📬
+
+**Goal:** Build the BMAD practitioner community via Substack and drive engagement around the method.
+
+**Link:** [BMAD Substack](https://bmad.substack.com) *(placeholder — create publication)*
+
+### Content Calendar
+
+| Week | Topic | Format |
+|------|-------|--------|
+| 1 | "Why Every Enterprise Needs BMAD" | Essay |
+| 2 | Claude 101 Takeaways | Thread + Checklist |
+| 3 | "CTO in a Box" Deep Dive | Tutorial |
+| 4 | BMAD in a Box — Live Deploy | Video + Code |
+| 5 | Community Spotlight: Reader Wins | Interview |
+| 6 | BMAD V6 Feature Breakdown | Essay |
+
+### Growth Tactics
+- [ ] Cross-post to LinkedIn with #BMADMethod hashtag
+- [ ] Embed kanban board in newsletter for transparency
+- [ ] Offer free "BMAD Starter Kit" as email-gated lead magnet
+- [ ] Host monthly virtual BMAD Office Hours
+- [ ] Invite 3 early readers to co-author a guest post
+
+### Metrics to Track
+| Metric | Target (90 days) |
+|--------|------------------|
+| Subscribers | 500 |
+| Open Rate | >45% |
+| Click Rate | >8% |
+| Referrals | 50 |
+| Paid Conversions | 10 |
+
+---
+
 ## Backlog
 
 - [ ] Record BMAD V6 walkthrough video

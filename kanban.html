@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board - Paperclip Co.</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .kanban-board {
+            display: flex;
+            gap: 1rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        .kanban-column {
+            flex: 1;
+            min-width: 300px;
+            background: #ecf0f1;
+            border-radius: 8px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .kanban-column-header {
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .column-todo .kanban-column-header { background: #e74c3c; color: white; }
+        .column-progress .kanban-column-header { background: #f39c12; color: white; }
+        .column-review .kanban-column-header { background: #3498db; color: white; }
+        .column-done .kanban-column-header { background: #2ecc71; color: white; }
+
+        .kanban-card {
+            background: white;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: grab;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .kanban-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .kanban-card.dragging {
+            opacity: 0.5;
+            cursor: grabbing;
+        }
+        .kanban-card h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 0.95rem;
+        }
+        .kanban-card p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        .kanban-card .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+        .tag-high { background: #ffe5e5; color: #c0392b; }
+        .tag-medium { background: #fff3e0; color: #e67e22; }
+        .tag-low { background: #e8f5e9; color: #27ae60; }
+        .tag-community { background: #e3f2fd; color: #1976d2; }
+
+        .kanban-drop-zone {
+            min-height: 100px;
+            border: 2px dashed transparent;
+            border-radius: 4px;
+            transition: border-color 0.2s;
+        }
+        .kanban-drop-zone.drag-over {
+            border-color: #3498db;
+            background: #f0f8ff;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        .subtitle {
+            font-weight: 300;
+            font-size: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Shared Menu -->
+    <div id="shared-menu"></div>
+    <script src="menu.js"></script>
+
+    <header>
+        <h1>📋 BMAD Kanban Board</h1>
+        <span class="subtitle">Drag tasks between columns to track progress</span>
+    </header>
+
+    <main>
+        <div class="kanban-board">
+            <!-- To Do Column -->
+            <div class="kanban-column column-todo">
+                <div class="kanban-column-header">🔲 To Do</div>
+                <div class="kanban-drop-zone" data-status="todo">
+                    <div class="kanban-card" draggable="true" data-task-id="1">
+                        <h4>Claude 101 Certification</h4>
+                        <p>Complete official Anthropic Claude 101 course</p>
+                        <span class="tag tag-high">High Priority</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="2">
+                        <h4>Anthropic Partnership Setup</h4>
+                        <p>Phase 1: Recruit 3 pilot users for validation</p>
+                        <span class="tag tag-high">High Priority</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="3">
+                        <h4>Create Substack Publication</h4>
+                        <p>Launch BMAD community newsletter on Substack</p>
+                        <span class="tag tag-community">Community</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="4">
+                        <h4>BMAD in a Box — Docker Deploy</h4>
+                        <p>Create docker-compose.yml for one-command deploy</p>
+                        <span class="tag tag-medium">Medium Priority</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="5">
+                        <h4>BMAD V6 Walkthrough Video</h4>
+                        <p>Record and publish feature demo video</p>
+                        <span class="tag tag-low">Backlog</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="6">
+                        <h4>Y Combinator Application</h4>
+                        <p>Prepare pitch deck for BMAD in a Box</p>
+                        <span class="tag tag-low">Backlog</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- In Progress Column -->
+            <div class="kanban-column column-progress">
+                <div class="kanban-column-header">⏳ In Progress</div>
+                <div class="kanban-drop-zone" data-status="progress">
+                    <div class="kanban-card" draggable="true" data-task-id="7">
+                        <h4>"CTO in a Box" Blog Post</h4>
+                        <p>Write Substack essay on personal AI stack</p>
+                        <span class="tag tag-community">Community</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="8">
+                        <h4>Local Model Setup (Ollama)</h4>
+                        <p>Configure on-premise Llama 3.1 for technical work</p>
+                        <span class="tag tag-medium">Medium Priority</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Column -->
+            <div class="kanban-column column-review">
+                <div class="kanban-column-header">👀 Review</div>
+                <div class="kanban-drop-zone" data-status="review">
+                    <div class="kanban-card" draggable="true" data-task-id="9">
+                        <h4>Tri-Model Architecture Doc</h4>
+                        <p>Review formula_model.md for accuracy</p>
+                        <span class="tag tag-medium">Medium Priority</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Done Column -->
+            <div class="kanban-column column-done">
+                <div class="kanban-column-header">✅ Done</div>
+                <div class="kanban-drop-zone" data-status="done">
+                    <div class="kanban-card" draggable="true" data-task-id="10">
+                        <h4>BMAD V6 Summary</h4>
+                        <p>Summarize YouTube video into formula_bmad.md</p>
+                        <span class="tag tag-high">High Priority</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="11">
+                        <h4>Kanban Board</h4>
+                        <p>Create interactive task board for BMAD team</p>
+                        <span class="tag tag-high">High Priority</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="12">
+                        <h4>Shared Navigation Menu</h4>
+                        <p>Extract menu into menu.js for all pages</p>
+                        <span class="tag tag-medium">Medium Priority</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Paperclip Co. - Built with BMAD Method 📎✨</p>
+        <p><em>"Transforming legacy enterprises into agentic AI architectures, one paperclip at a time."</em></p>
+    </footer>
+
+    <script>
+        // Kanban Drag & Drop Logic
+        const cards = document.querySelectorAll('.kanban-card');
+        const dropZones = document.querySelectorAll('.kanban-drop-zone');
+
+        cards.forEach(card => {
+            card.addEventListener('dragstart', () => {
+                card.classList.add('dragging');
+            });
+            card.addEventListener('dragend', () => {
+                card.classList.remove('dragging');
+                dropZones.forEach(zone => zone.classList.remove('drag-over'));
+            });
+        });
+
+        dropZones.forEach(zone => {
+            zone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                zone.classList.add('drag-over');
+            });
+            zone.addEventListener('dragleave', () => {
+                zone.classList.remove('drag-over');
+            });
+            zone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                zone.classList.remove('drag-over');
+                const draggingCard = document.querySelector('.dragging');
+                if (draggingCard) {
+                    zone.appendChild(draggingCard);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
