@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="markdown-renderer.html?file=formula_bmad.md">🔥 Formula BMAD</a></li>
                     <li><a href="markdown-renderer.html?file=formula_model.md">🧠 Formula Model</a></li>
                     <li><a href="markdown-renderer.html?file=todos.md">✅ Todos</a></li>
+                    <li><a href="markdown-renderer.html?file=formula_substack.md">📬 Formula Substack</a></li>
                 </ul>
             </li>
         </ul>
