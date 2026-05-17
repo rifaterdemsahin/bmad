@@ -27,6 +27,33 @@
 
 ## 🖥️ Part 1: Clone & Run BMAD (Vanilla — No Build Step)
 
+### Step 0 — Install Python (If Not Present)
+
+BMAD needs a local file server to load JSON data. Most systems have Python pre-installed. Check first:
+
+```bash
+python3 --version
+```
+
+If you see a version (e.g., `Python 3.11.x`), skip to Step 1.
+
+**If `python3` is NOT found, install it:**
+
+```bash
+# macOS (Homebrew)
+brew install python
+
+# Ubuntu/Debian
+sudo apt update && sudo apt install python3
+
+# Windows (via Microsoft Store or python.org)
+# Download from https://python.org/downloads/
+```
+
+> **Claude will handle this for you.** If the check fails, tell Claude: *"Python is missing. Please install it for me."*
+
+---
+
 ### Step 1 — Clone the Repo
 
 Open your terminal and run:
@@ -107,13 +134,53 @@ You should see the **📎 Paperclip Co. Enterprise AI Dashboard** with:
 
 > **Hermes** is the BMAD Orchestrator that coordinates multi-agent workflows.
 
-### Step 1 — Run the Installer
+### Step 1 — Check Prerequisites
+
+Before installing Hermes, verify the following are installed:
+
+```bash
+# Check curl (required for the installer)
+curl --version
+
+# Check bash (usually pre-installed on macOS)
+bash --version
+
+# Check Node.js (required by Hermes)
+node --version
+```
+
+**If any are missing, install them:**
+
+```bash
+# macOS — install missing tools via Homebrew
+brew install curl bash node
+
+# Ubuntu/Debian
+sudo apt update && sudo apt install curl bash nodejs npm
+```
+
+> **Claude will verify these for you.** If any check fails, tell Claude: *"[tool] is missing. Please install it."*
+
+### Step 2 — Run the Hermes Installer
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 ```
 
-### Step 2 — Reload Your Shell
+The installer will:
+1. Clone the Hermes repo to `~/.hermes`
+2. Create a Python virtual environment
+3. Install Python dependencies
+4. Install global `hermes` command
+
+> **If the installer fails,** tell Claude the exact error message. Common fixes:
+> - Re-run with `bash -x` for verbose output
+> - Ensure `python3` is available (see Part 1, Step 0)
+> - Check internet connection
+
+### Step 3 — Reload Your Shell
+
+The installer adds `hermes` to your PATH. Refresh your shell:
 
 ```bash
 source ~/.zshrc
@@ -121,17 +188,36 @@ source ~/.zshrc
 
 *(Use `source ~/.bashrc` if you are on Bash instead of Zsh.)*
 
-### Step 3 — Configure Hermes
+**Verify the command is available:**
+
+```bash
+hermes --version
+```
+
+If you see a version number, proceed. If you get `command not found`, tell Claude.
+
+### Step 4 — Configure Hermes
+
+Launch the interactive setup wizard:
 
 ```bash
 hermes setup
 ```
 
-Choose your LLM provider during the wizard:
-- **Recommended for speed:** OpenRouter or Anthropic (Claude)
-- **Local / offline:** Ollama → Custom Endpoint → `http://localhost:11434/v1`
+Follow the prompts to pick your LLM provider:
 
-### Step 4 — Verify Installation
+| Provider | Best For | Setup Note |
+|----------|----------|-----------|
+| **Anthropic (Claude)** | Best reasoning, reliable | Needs API key from [console.anthropic.com](https://console.anthropic.com) |
+| **OpenRouter** | Cheaper, model variety | Needs API key from [openrouter.ai](https://openrouter.ai) |
+| **OpenAI** | GPT-4o, fast | Needs API key from [platform.openai.com](https://platform.openai.com) |
+| **Ollama (Local)** | Free, offline, private | Must have Ollama running at `http://localhost:11434` |
+
+> **Claude will guide you through this wizard.** Just answer the prompts as they appear.
+
+### Step 5 — Verify Installation
+
+Run the built-in diagnostic:
 
 ```bash
 hermes doctor
@@ -139,11 +225,13 @@ hermes doctor
 
 Expected output: all checks pass ✅
 
+If any check fails, the output will tell you exactly what's wrong. Paste the error into Claude for help.
+
 ---
 
 > 🛑 **STOPPED HERE?**
 >
-> **👉 Ask Claude:** *"Hermes is installed and verified. What's the next step in chidi-setup.md?"*
+> **👉 Ask Claude:** *"Hermes is installed, configured, and verified with `hermes doctor`. What's the next step in chidi-setup.md?"*
 >
 > Claude will run the smoke tests with you.
 
@@ -197,9 +285,12 @@ bmad/
 | Problem | Fix |
 |---------|-----|
 | `Permission denied (publickey)` on clone | Add your SSH key to GitHub or use HTTPS: `git clone https://github.com/rifaterdemsahin/bmad.git` |
+| `python3: command not found` | Install Python (see Part 1, Step 0) |
+| `curl: command not found` | `brew install curl` (macOS) or `sudo apt install curl` (Linux) |
+| `node: command not found` | Install Node.js from [nodejs.org](https://nodejs.org) or via Homebrew |
 | JSON data not loading / autocomplete empty | Make sure you are using `http://localhost:...`, not `file://...` |
 | `hermes` command not found | Re-run `source ~/.zshrc` or open a new terminal tab |
-| Hermes setup fails | Check Node.js version: `node --version` → needs v18+ |
+| Hermes setup fails | Check Node.js version: `node --version` → needs v18+. Also verify `python3` is installed. |
 
 ---
 
@@ -209,19 +300,22 @@ bmad/
 > **Roles:** Rifat shares screen + guides; Chidi drives keyboard
 
 ### Phase 1 — Environment Check (5 min)
-- [ ] Verify Git, Node, browser ready
+- [ ] Verify Git, Python, Node, browser ready
 - [ ] Confirm SSH access to GitHub
 
 ### Phase 2 — Clone & Launch (5 min)
 - [ ] `git clone git@github.com:rifaterdemsahin/bmad.git`
+- [ ] `cd bmad`
 - [ ] Start local server (`python3 -m http.server 8000` or `npx serve`)
 - [ ] Open `http://localhost:8000` in browser
 
 ### Phase 3 — Hermes Setup (10 min)
+- [ ] Verify prerequisites (`curl`, `bash`, `node`)
 - [ ] Run Hermes install script
 - [ ] `source ~/.zshrc`
-- [ ] `hermes setup` → pick provider
-- [ ] `hermes doctor` → verify
+- [ ] `hermes --version` → confirm command works
+- [ ] `hermes setup` → pick provider and enter API key
+- [ ] `hermes doctor` → verify all checks pass
 
 ### Phase 4 — Smoke Test & Q&A (5–10 min)
 - [ ] Search "Chidi" in dashboard autocomplete
