@@ -28,6 +28,24 @@ git clone git@github.com:rifaterdemsahin/bmad.git
 cd bmad
 ```
 
+### Step 1a — Open Project in Claude 🤖
+
+> Chidi uses **Claude** as his co-pilot to complete the remaining steps.
+
+Open the `bmad` folder in **Claude Desktop** (or **Claude Code** if installed):
+
+```bash
+claude
+```
+
+Once inside, tell Claude:
+
+```
+I need to set up the BMAD project locally and install Hermes. Please guide me through the remaining steps in chidi-setup.md.
+```
+
+Claude will then walk you through serving the files, installing Hermes, and running the smoke tests — executing commands and explaining what each part does.
+
 ### Step 2 — Serve the Files Locally
 
 Because the app fetches JSON data sources, you need a local server (browsers block `file://` fetches).
