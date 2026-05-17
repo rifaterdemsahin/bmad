@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <li><a href="index.html">📊 Dashboard</a></li>
             <li><a href="markdown-renderer.html?file=architecture.md">🏗️ Architecture</a></li>
             <li><a href="kanban.html">📋 Kanban</a></li>
+            <li><a href="agents.html">🤖 Agents</a></li>
+            <li><a href="markdown-renderer.html?file=dictionary.md">📖 Dictionary</a></li>
             <li class="dropdown">
                 <a href="#">🤖 BMAD Agents ▾</a>
                 <ul class="dropdown-content">
@@ -18,6 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="markdown-renderer.html?file=.bmad-core/agents/architect.md">🏗️ Architect</a></li>
                     <li><a href="markdown-renderer.html?file=.bmad-core/agents/bmad-orchestrator.md">⚡ Orchestrator</a></li>
                     <li><a href="markdown-renderer.html?file=.bmad-core/agents/cto.md">👨‍💼 CTO</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/transformation.md">🔄 Transformation</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/pipeline.md">🛠️ Pipeline</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/dashboards.md">📊 Dashboards</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/content.md">✍️ Content</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/coach.md">🎯 Coach</a></li>
                 </ul>
             </li>
             <li class="dropdown">
