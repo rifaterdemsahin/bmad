@@ -2,6 +2,8 @@
 
 **Collaborative BMAD Sandbox** setup for a **Paperclip Company** 🧷
 
+> https://youtu.be/4VPoGSeI2sw?si=GS3as3jqH8qlZxYK
+
 ---
 
 ## 🎯 Project Overview
