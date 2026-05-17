@@ -283,6 +283,44 @@ hermes quickstep --provider ollama --api-key dummy --model llama3.1 --base-url h
 
 ---
 
+### Step 4b — Fix & Restart If Setup Errors
+
+It is **completely normal** for `hermes setup` or `hermes quickstep` to fail on the first try. The most common causes are:
+
+| Error | Likely Cause | Quick Fix |
+|-------|-------------|-----------|
+| `Authentication failed` | Wrong API key or key not loaded from `.env` | Re-run `source .env`, double-check the key in your provider dashboard |
+| `Model not found` | Typo in model name | Use exact model string from provider docs |
+| `Connection refused` | Ollama not running | Start Ollama first: `ollama serve` |
+| `Permission denied` | Installer couldn't write to `~/.hermes` | `mkdir -p ~/.hermes` then retry |
+| `ModuleNotFoundError` | Python deps missing | `cd ~/.hermes && pip install -r requirements.txt` |
+
+**If you see ANY error during setup:**
+
+1. **Copy the FULL error message** (select all text in terminal)
+2. **Paste it into Claude exactly like this:**
+
+```
+👉 "Claude, Hermes setup failed with this error: [PASTE FULL ERROR]. Please fix it and tell me the exact command to restart."
+```
+
+3. **Claude will give you a fix command.** Run it.
+4. **Then restart the setup:**
+
+```bash
+# If you used quickstep:
+source .env && hermes quickstep --provider anthropic --api-key $ANTHROPIC_API_KEY --model claude-3-5-sonnet-20241022
+
+# If you used the wizard:
+hermes setup
+```
+
+5. **Repeat until it succeeds.** Most people need 1–3 tries. This is expected.
+
+> 🔄 **The loop is:** Error → Paste to Claude → Get fix → Restart setup → Test → Repeat if needed.
+
+---
+
 ### Step 5 — First Test: Say Hello
 
 Before anything else, make sure Hermes can actually talk to the LLM:
@@ -441,8 +479,9 @@ bmad/
 - [ ] Configure Hermes (pick one):
   - **Fast path:** `source .env && hermes quickstep --provider anthropic --api-key $ANTHROPIC_API_KEY --model claude-3-5-sonnet-20241022`
   - **Guided path:** `hermes setup` → pick provider and enter API key
+- [ ] **If setup throws an error:** copy error → paste into Claude → get fix → **restart setup** → repeat until it succeeds
 - [ ] `hermes chat` → type `hello` → verify response
-- [ ] If error: paste into Claude → fix → retry until `hello` works
+- [ ] If `hello` fails: paste error into Claude → fix → retry `hermes chat`
 - [ ] `hermes doctor` → verify all checks pass
 
 ### Phase 4 — Smoke Test & Q&A (5–10 min)
@@ -485,6 +524,7 @@ Stuck anywhere? Copy-paste one of these into Claude:
 | Just cloned the repo | *"I just cloned the BMAD repo. What's next in chidi-setup.md?"* |
 | Dashboard is running | *"BMAD is running on localhost. Guide me through the Hermes install."* |
 | Want fast Hermes setup | *"Create a `.env` file for my API key, then run `hermes quickstep` with it."* |
+| Hermes setup error | *"Hermes setup / quickstep failed with this error: [paste full error]. Please fix it and give me the exact command to restart setup."* |
 | Hermes installed | *"Hermes is set up. Let's run the smoke tests from chidi-setup.md."* |
 | Smoke tests passed | *"Everything works. What's the wrap-up step in chidi-setup.md?"* |
 | Something broke | *"I got an error at [X step]. Here's the output: [paste error]"* |
