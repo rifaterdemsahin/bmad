@@ -196,36 +196,123 @@ hermes --version
 
 If you see a version number, proceed. If you get `command not found`, tell Claude.
 
-### Step 4 — Configure Hermes
+### Step 4 — Configure Hermes (Interactive Wizard)
 
-Launch the interactive setup wizard:
+Launch the setup wizard:
 
 ```bash
 hermes setup
 ```
 
-Follow the prompts to pick your LLM provider:
+The wizard will ask you a series of questions. **Do not worry if you get something wrong.** You can re-run `hermes setup` anytime.
 
-| Provider | Best For | Setup Note |
-|----------|----------|-----------|
-| **Anthropic (Claude)** | Best reasoning, reliable | Needs API key from [console.anthropic.com](https://console.anthropic.com) |
-| **OpenRouter** | Cheaper, model variety | Needs API key from [openrouter.ai](https://openrouter.ai) |
-| **OpenAI** | GPT-4o, fast | Needs API key from [platform.openai.com](https://platform.openai.com) |
-| **Ollama (Local)** | Free, offline, private | Must have Ollama running at `http://localhost:11434` |
+**Typical flow:**
+1. **Pick your LLM provider** — Choose one:
+   - `anthropic` (Claude) — best reasoning, recommended
+   - `openrouter` — cheaper, many models
+   - `openai` — GPT-4o
+   - `ollama` — free, runs locally
+2. **Enter your API key** — Paste it when prompted (it will be hidden)
+3. **Pick a model** — e.g., `claude-3-5-sonnet-20241022` for Anthropic
+4. **Confirm** — Wizard writes the config to `~/.hermes/config.yaml`
 
-> **Claude will guide you through this wizard.** Just answer the prompts as they appear.
+> **Claude will guide you through this wizard live.** Just tell Claude: *"I ran `hermes setup`. What should I pick?"*
 
-### Step 5 — Verify Installation
+---
 
-Run the built-in diagnostic:
+### Step 4a — Quickstep Alternative (Faster Path)
+
+If you already know your provider and have your API key ready, use **quickstep** to skip the interactive wizard:
+
+```bash
+# Example: Quickstep with Anthropic (Claude)
+hermes quickstep --provider anthropic --api-key YOUR_API_KEY_HERE --model claude-3-5-sonnet-20241022
+```
+
+**Other quickstep examples:**
+
+```bash
+# OpenRouter
+hermes quickstep --provider openrouter --api-key YOUR_KEY --model anthropic/claude-3.5-sonnet
+
+# OpenAI
+hermes quickstep --provider openai --api-key YOUR_KEY --model gpt-4o
+
+# Ollama (local)
+hermes quickstep --provider ollama --api-key dummy --model llama3.1 --base-url http://localhost:11434/v1
+```
+
+> **Claude can run quickstep for you.** Just say: *"Claude, run `hermes quickstep` with my Anthropic key."* Claude will ask for your key, construct the command, and execute it.
+
+**If quickstep fails,** fall back to the interactive `hermes setup` wizard (Step 4) — it's more forgiving.
+
+---
+
+### Step 5 — First Test: Say Hello
+
+Before anything else, make sure Hermes can actually talk to the LLM:
+
+```bash
+hermes chat
+```
+
+You should see a prompt like:
+
+```
+> Welcome to Hermes! Type 'exit' to quit.
+> You:
+```
+
+**Type:**
+
+```
+hello
+```
+
+**Expected:** Hermes responds with a greeting. If you see a reply, Hermes is connected and working. ✅
+
+**If you see an ERROR instead,** copy the entire error message and paste it into Claude:
+
+```
+👉 "Claude, I ran `hermes chat`, typed 'hello', and got this error: [PASTE ERROR HERE]. Please fix it."
+```
+
+**Claude will:**
+- Read the error
+- Tell you exactly what's wrong (wrong API key, wrong model name, missing config, etc.)
+- Give you the exact command or fix to run
+- Stay with you until `hello` works
+
+---
+
+### Step 6 — Iterate Until It Works
+
+| Try | Result | What To Do |
+|-----|--------|-----------|
+| 1st `hermes chat` | Works! 🎉 | Skip to Step 7 |
+| 1st `hermes chat` | Error ❌ | Paste error into Claude, get fix, retry |
+| 2nd `hermes chat` | Works! 🎉 | Skip to Step 7 |
+| 2nd `hermes chat` | Still error ❌ | Paste the NEW error into Claude again |
+
+> **This is normal.** Most Hermes setups need 1–3 tries to get the provider + model + API key combination exactly right. Claude handles every retry.
+
+---
+
+### Step 7 — Verify with `hermes doctor`
+
+Once `hello` works, run the full diagnostic:
 
 ```bash
 hermes doctor
 ```
 
-Expected output: all checks pass ✅
+Expected: all checks pass ✅
 
-If any check fails, the output will tell you exactly what's wrong. Paste the error into Claude for help.
+If any check fails, paste the output into Claude just like before:
+
+```
+👉 "Claude, `hermes doctor` failed with this output: [PASTE OUTPUT]. Please fix it."
+```
 
 ---
 
@@ -314,7 +401,11 @@ bmad/
 - [ ] Run Hermes install script
 - [ ] `source ~/.zshrc`
 - [ ] `hermes --version` → confirm command works
-- [ ] `hermes setup` → pick provider and enter API key
+- [ ] Configure Hermes (pick one):
+  - **Fast path:** `hermes quickstep --provider anthropic --api-key KEY --model claude-3-5-sonnet-20241022`
+  - **Guided path:** `hermes setup` → pick provider and enter API key
+- [ ] `hermes chat` → type `hello` → verify response
+- [ ] If error: paste into Claude → fix → retry until `hello` works
 - [ ] `hermes doctor` → verify all checks pass
 
 ### Phase 4 — Smoke Test & Q&A (5–10 min)
@@ -356,6 +447,7 @@ Stuck anywhere? Copy-paste one of these into Claude:
 |-----------|----------------------|
 | Just cloned the repo | *"I just cloned the BMAD repo. What's next in chidi-setup.md?"* |
 | Dashboard is running | *"BMAD is running on localhost. Guide me through the Hermes install."* |
+| Want fast Hermes setup | *"Run `hermes quickstep` for me with Anthropic / OpenRouter / OpenAI."* |
 | Hermes installed | *"Hermes is set up. Let's run the smoke tests from chidi-setup.md."* |
 | Smoke tests passed | *"Everything works. What's the wrap-up step in chidi-setup.md?"* |
 | Something broke | *"I got an error at [X step]. Here's the output: [paste error]"* |
