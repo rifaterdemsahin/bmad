@@ -17,6 +17,14 @@
 
 ---
 
+> 🛑 **STOPPED HERE?**
+>
+> **👉 Ask Claude:** *"I completed the pre-call checklist. What's next in the chidi-setup.md?"*
+>
+> Claude will guide you through the next steps live.
+
+---
+
 ## 🖥️ Part 1: Clone & Run BMAD (Vanilla — No Build Step)
 
 ### Step 1 — Clone the Repo
@@ -87,6 +95,14 @@ You should see the **📎 Paperclip Co. Enterprise AI Dashboard** with:
 
 ---
 
+> 🛑 **STOPPED HERE?**
+>
+> **👉 Ask Claude:** *"The dashboard is running on localhost. What's the next step in chidi-setup.md?"*
+>
+> Claude will walk you through installing Hermes.
+
+---
+
 ## ⚡ Part 2: Install Hermes Agent (macOS)
 
 > **Hermes** is the BMAD Orchestrator that coordinates multi-agent workflows.
@@ -125,6 +141,14 @@ Expected output: all checks pass ✅
 
 ---
 
+> 🛑 **STOPPED HERE?**
+>
+> **👉 Ask Claude:** *"Hermes is installed and verified. What's the next step in chidi-setup.md?"*
+>
+> Claude will run the smoke tests with you.
+
+---
+
 ## 🧪 Part 3: Quick Smoke Test (Do Together on the Call)
 
 After both parts are complete, run this together on the Teams call to verify everything works end-to-end:
@@ -135,6 +159,14 @@ After both parts are complete, run this together on the Teams call to verify eve
 | 2 | Click **Run Model Execution** | Console shows ROI margin calculation |
 | 3 | Click **Demonstrate Data Sync** | Hermes console shows strategy sync steps |
 | 4 | In terminal, run `hermes chat` | Interactive chat with the orchestrator starts |
+
+---
+
+> 🛑 **STOPPED HERE?**
+>
+> **👉 Ask Claude:** *"I finished the smoke tests. What's the final step in chidi-setup.md?"*
+>
+> Claude will remind you to push your changes and wrap up.
 
 ---
 
@@ -207,3 +239,33 @@ bmad/
 ---
 
 > *"Transforming legacy enterprises into agentic AI architectures, one paperclip at a time."* 📎✨
+
+---
+
+# 🎯 FINAL REMINDER
+
+**If you are reading this file and have NOT finished the setup — stop and ask Claude.**
+
+```
+👉 "Claude, I need to continue the chidi-setup.md. What should I do next?"
+```
+
+**Claude is your co-pilot.** Every step in this guide is designed to be executed with Claude's help. Don't try to do it all manually — let Claude run the commands, explain the output, and catch errors in real time.
+
+---
+
+## 🔄 Claude Prompt Cheat Sheet
+
+Stuck anywhere? Copy-paste one of these into Claude:
+
+| Situation | What to say to Claude |
+|-----------|----------------------|
+| Just cloned the repo | *"I just cloned the BMAD repo. What's next in chidi-setup.md?"* |
+| Dashboard is running | *"BMAD is running on localhost. Guide me through the Hermes install."* |
+| Hermes installed | *"Hermes is set up. Let's run the smoke tests from chidi-setup.md."* |
+| Smoke tests passed | *"Everything works. What's the wrap-up step in chidi-setup.md?"* |
+| Something broke | *"I got an error at [X step]. Here's the output: [paste error]"* |
+
+---
+
+> 🚀 **Remember: This guide is a conversation, not a checklist.** Keep Claude open and keep asking. *Pull first. Push last. Always.*
