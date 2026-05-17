@@ -1,0 +1,59 @@
+# Claude Init — BMAD Project
+
+> **Auto-read on every Claude session.** This file reminds Claude (and Chidi) about the golden rule before touching any code.
+
+---
+
+## ⚡ Golden Rule
+
+```
+ALWAYS PULL BEFORE YOU START
+ALWAYS PUSH WHEN YOU'RE DONE
+```
+
+### Why?
+Rifat and Chidi are collaborating on the same repo. If you start coding without pulling first, you risk working on stale code and creating merge conflicts.
+
+---
+
+## 🔄 Standard Claude Session Flow
+
+```bash
+# 1. Pull latest changes BEFORE doing anything
+git pull origin main
+
+# 2. Do your work (edit, create, fix)
+# ...
+
+# 3. Commit and push when done
+git add -A
+git commit -m "your message"
+git push origin main
+```
+
+---
+
+## 🛑 If You Forget to Pull
+
+If Claude starts work and you haven't pulled:
+
+```bash
+git stash          # save your current changes
+git pull origin main   # get the latest
+git stash pop      # re-apply your changes
+```
+
+---
+
+## 📋 Quick Checklist (Run This Every Time)
+
+- [ ] `git pull origin main` — Got the latest?
+- [ ] `git status` — Clean working tree?
+- [ ] Do the work
+- [ ] `git add -A && git commit -m "..."`
+- [ ] `git push origin main`
+- [ ] Verify: `git log --oneline -3`
+
+---
+
+> *"Pull before you push. The only thing worse than a bug is a merge conflict."* 📎

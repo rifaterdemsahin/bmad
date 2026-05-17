@@ -38,6 +38,16 @@ Open the `bmad` folder in **Claude Desktop** (or **Claude Code** if installed):
 claude
 ```
 
+**⚡ CRITICAL — Pull First!**
+
+Before Claude does anything, make sure to pull the latest changes:
+
+```bash
+git pull origin main
+```
+
+> **Golden Rule:** ALWAYS PULL BEFORE YOU START. ALWAYS PUSH WHEN YOU'RE DONE. Read `claude.init` for the full protocol.
+
 Once inside, tell Claude:
 
 ```
@@ -187,6 +197,12 @@ bmad/
 - [ ] Click **Demonstrate Data Sync**
 - [ ] Run `hermes chat` in terminal
 - [ ] Celebrate 🎉
+
+### Phase 5 — Wrap Up & Push (2 min)
+- [ ] `git add -A`
+- [ ] `git commit -m "chidi: local setup complete"`
+- [ ] `git push origin main`
+- [ ] `git log --oneline -3` → verify push
 
 ---
 
