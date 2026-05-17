@@ -73,6 +73,32 @@
 
 ---
 
+### 3. Hermes Orchestrator Upgrade ⚡
+**Priority:** High  
+**Status:** 🔲 Not Started  
+**Goal:** Elevate the Hermes Orchestrator from a demo console to a production-ready multi-model routing engine.
+
+**Scope:**
+- [ ] Implement intent classification layer (routes to Claude / Company LLM / Local Model)
+- [ ] Add consensus protocol when agents disagree on implementation paths
+- [ ] Build merge-ready output formatter for versioned architecture decisions
+- [ ] Integrate live data sync across `business.json`, `model.json`, `stakeholders.json`
+- [ ] Create health-check dashboard for tri-model uptime and latency
+- [ ] Add `/bmad-help` and `/party-mode` command handlers (BMAD V6 parity)
+
+**Technical Deliverables:**
+| Component | File | Status |
+|-----------|------|--------|
+| Intent Router | `hermes/intent-router.js` | 🔲 |
+| Consensus Engine | `hermes/consensus.js` | 🔲 |
+| Data Sync Worker | `hermes/sync-worker.js` | 🔲 |
+| Health Dashboard | `hermes/health.html` | 🔲 |
+| CLI Commands | `hermes/cli.js` | 🔲 |
+
+**Success Metric:** Hermes routes 100 test queries across all 3 models with <2s end-to-end latency and 95% routing accuracy.
+
+---
+
 ## Use Cases
 
 ### Use Case 1: AI in Personal Life — "CTO in a Box" 🏠
