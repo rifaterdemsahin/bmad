@@ -102,6 +102,10 @@ ANTHROPIC_API_KEY=sk-ant-your-key-here
 # OPENAI_API_KEY=your-key-here
 ```
 
+> 💰 **Budget Cap for Testing:** Do NOT load more than **$5** on your API key for this setup. Hermes `hello` and `doctor` tests use almost no tokens. If you want to cap spend, set billing limits in your provider dashboard (Anthropic: Settings → Limits → Monthly Budget).
+
+> 🔐 **Future: Key Rotation & Vault** For production, rotate keys monthly and store them in a secrets manager (AWS Secrets Manager, 1Password, or HashiCorp Vault). Never hardcode production keys in `.env` files. This guide uses `.env` only for local development.
+
 3. Verify `.gitignore` already ignores `.env`:
 
 ```bash
@@ -344,7 +348,43 @@ hello
 
 **Expected:** Hermes responds with a greeting. If you see a reply, Hermes is connected and working. ✅
 
-**If you see an ERROR instead,** copy the entire error message and paste it into Claude:
+---
+
+#### ⚠️ Common Warning: "No auxiliary LLM provider configured"
+
+You may see yellow warnings like:
+
+```
+⚠ No auxiliary LLM provider configured — context compression will drop middle turns...
+⚠ Auxiliary title generation failed: No LLM provider configured for task=title_generation
+```
+
+**These are NOT fatal errors** — Hermes is working. But background tasks (context compression, auto-titles) need a separate provider.
+
+**Quick Fix:**
+
+```bash
+# Option A: Re-run setup and configure the auxiliary provider
+hermes setup
+
+# Option B: Add auxiliary provider to Hermes config
+nano ~/.hermes/config.yaml
+```
+
+Add these lines (use the same key as your main provider):
+
+```yaml
+auxiliary_provider: anthropic
+auxiliary_api_key: sk-ant-your-same-key-here
+```
+
+Then restart `hermes chat`.
+
+> **Claude will handle this for you.** Just paste the warnings and say: *"Claude, I see 'No auxiliary LLM provider' warnings in Hermes. Please fix it."*
+
+---
+
+**If you see a RED ERROR instead of warnings,** copy the entire error message and paste it into Claude:
 
 ```
 👉 "Claude, I ran `hermes chat`, typed 'hello', and got this error: [PASTE ERROR HERE]. Please fix it."
