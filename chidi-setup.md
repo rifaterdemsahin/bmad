@@ -83,6 +83,41 @@ git pull origin main
 
 > **Golden Rule:** ALWAYS PULL BEFORE YOU START. ALWAYS PUSH WHEN YOU'RE DONE. Read `claude.init` for the full protocol.
 
+### Step 1b — Create `.env` File for API Keys
+
+Before setting up Hermes, create a safe place for your API keys so they never get committed to Git.
+
+1. In the `bmad` folder, create a `.env` file:
+
+```bash
+touch .env
+```
+
+2. Open it in your editor and add your key(s):
+
+```bash
+# .env — NEVER COMMIT THIS FILE
+ANTHROPIC_API_KEY=sk-ant-your-key-here
+# OPENROUTER_API_KEY=your-key-here
+# OPENAI_API_KEY=your-key-here
+```
+
+3. Verify `.gitignore` already ignores `.env`:
+
+```bash
+cat .gitignore | grep env
+```
+
+You should see `.env` listed. If not, add it:
+
+```bash
+echo ".env" >> .gitignore
+```
+
+> **Claude will do all of this for you.** Just say: *"Claude, create a `.env` file for my Anthropic key and make sure it's gitignored."*
+
+---
+
 Once inside, tell Claude:
 
 ```
@@ -225,24 +260,24 @@ The wizard will ask you a series of questions. **Do not worry if you get somethi
 If you already know your provider and have your API key ready, use **quickstep** to skip the interactive wizard:
 
 ```bash
-# Example: Quickstep with Anthropic (Claude)
-hermes quickstep --provider anthropic --api-key YOUR_API_KEY_HERE --model claude-3-5-sonnet-20241022
+# Load key from .env and run quickstep
+source .env && hermes quickstep --provider anthropic --api-key $ANTHROPIC_API_KEY --model claude-3-5-sonnet-20241022
 ```
 
 **Other quickstep examples:**
 
 ```bash
 # OpenRouter
-hermes quickstep --provider openrouter --api-key YOUR_KEY --model anthropic/claude-3.5-sonnet
+source .env && hermes quickstep --provider openrouter --api-key $OPENROUTER_API_KEY --model anthropic/claude-3.5-sonnet
 
 # OpenAI
-hermes quickstep --provider openai --api-key YOUR_KEY --model gpt-4o
+source .env && hermes quickstep --provider openai --api-key $OPENAI_API_KEY --model gpt-4o
 
-# Ollama (local)
+# Ollama (local — no key needed)
 hermes quickstep --provider ollama --api-key dummy --model llama3.1 --base-url http://localhost:11434/v1
 ```
 
-> **Claude can run quickstep for you.** Just say: *"Claude, run `hermes quickstep` with my Anthropic key."* Claude will ask for your key, construct the command, and execute it.
+> **Claude can run quickstep for you.** Just say: *"Claude, run `hermes quickstep` with the key from my `.env` file."* Claude will load it safely and execute the command without exposing the key in terminal history.
 
 **If quickstep fails,** fall back to the interactive `hermes setup` wizard (Step 4) — it's more forgiving.
 
@@ -378,6 +413,7 @@ bmad/
 | JSON data not loading / autocomplete empty | Make sure you are using `http://localhost:...`, not `file://...` |
 | `hermes` command not found | Re-run `source ~/.zshrc` or open a new terminal tab |
 | Hermes setup fails | Check Node.js version: `node --version` → needs v18+. Also verify `python3` is installed. |
+| Accidentally committed `.env` with API key | Immediately revoke the key in your provider dashboard, then run: `git rm --cached .env && echo ".env" >> .gitignore && git commit -m "remove leaked env file"` |
 
 ---
 
@@ -401,8 +437,9 @@ bmad/
 - [ ] Run Hermes install script
 - [ ] `source ~/.zshrc`
 - [ ] `hermes --version` → confirm command works
+- [ ] Create `.env` file with API key + verify `.gitignore` has `.env`
 - [ ] Configure Hermes (pick one):
-  - **Fast path:** `hermes quickstep --provider anthropic --api-key KEY --model claude-3-5-sonnet-20241022`
+  - **Fast path:** `source .env && hermes quickstep --provider anthropic --api-key $ANTHROPIC_API_KEY --model claude-3-5-sonnet-20241022`
   - **Guided path:** `hermes setup` → pick provider and enter API key
 - [ ] `hermes chat` → type `hello` → verify response
 - [ ] If error: paste into Claude → fix → retry until `hello` works
@@ -447,7 +484,7 @@ Stuck anywhere? Copy-paste one of these into Claude:
 |-----------|----------------------|
 | Just cloned the repo | *"I just cloned the BMAD repo. What's next in chidi-setup.md?"* |
 | Dashboard is running | *"BMAD is running on localhost. Guide me through the Hermes install."* |
-| Want fast Hermes setup | *"Run `hermes quickstep` for me with Anthropic / OpenRouter / OpenAI."* |
+| Want fast Hermes setup | *"Create a `.env` file for my API key, then run `hermes quickstep` with it."* |
 | Hermes installed | *"Hermes is set up. Let's run the smoke tests from chidi-setup.md."* |
 | Smoke tests passed | *"Everything works. What's the wrap-up step in chidi-setup.md?"* |
 | Something broke | *"I got an error at [X step]. Here's the output: [paste error]"* |
