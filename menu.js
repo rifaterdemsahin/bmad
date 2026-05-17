@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="markdown-renderer.html?file=todos.md">✅ Todos</a></li>
                     <li><a href="markdown-renderer.html?file=formula_substack.md">📬 Formula Substack</a></li>
                     <li><a href="markdown-renderer.html?file=agentic-cto-substack-plan.md">🎯 Agentic CTO Plan</a></li>
+                    <li><a href="markdown-renderer.html?file=chidi-setup.md">🚀 Chidi Setup Guide</a></li>
                 </ul>
             </li>
         </ul>
