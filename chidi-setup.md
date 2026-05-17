@@ -246,7 +246,7 @@ After both parts are complete, run this together on the Teams call to verify eve
 | 1 | In browser, type `Chidi` in the search box | Autocomplete shows "Chidi Oparah — Stakeholder" |
 | 2 | Click **Run Model Execution** | Console shows ROI margin calculation |
 | 3 | Click **Demonstrate Data Sync** | Hermes console shows strategy sync steps |
-| 4 | In terminal, run `hermes chat` | Interactive chat with the orchestrator starts |
+| 4 | In terminal, `cd bmad` then run `hermes chat` | Interactive chat with the orchestrator starts (make sure you're in the `bmad` folder) |
 
 ---
 
@@ -321,7 +321,7 @@ bmad/
 - [ ] Search "Chidi" in dashboard autocomplete
 - [ ] Click **Run Model Execution**
 - [ ] Click **Demonstrate Data Sync**
-- [ ] Run `hermes chat` in terminal
+- [ ] In terminal, `cd bmad` then run `hermes chat`
 - [ ] Celebrate 🎉
 
 ### Phase 5 — Wrap Up & Push (2 min)
