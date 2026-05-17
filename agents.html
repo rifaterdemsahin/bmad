@@ -30,6 +30,7 @@
         .agent-card.online { border-left-color: #2ecc71; }
         .agent-card.progress { border-left-color: #f39c12; }
         .agent-card.defined { border-left-color: #95a5a6; }
+        .agent-card.security { border-left-color: #e74c3c; }
 
         .agent-status {
             position: absolute;
@@ -148,14 +149,14 @@
 
     <header>
         <h1>🤖 BMAD Agent Fleet</h1>
-        <span class="subtitle">9 specialized agents powering the BMAD Method</span>
+        <span class="subtitle">10 specialized agents powering the BMAD Method</span>
     </header>
 
     <div class="intro">
         <p>Each BMAD agent is a role-based AI co-pilot with a defined persona, command set, and integration point. Click <strong>Definition</strong> to see the agent's markdown spec, or <strong>Live</strong> to interact with it on the site.</p>
         <div class="stats-bar">
             <div class="stat">
-                <div class="stat-number">9</div>
+                <div class="stat-number">10</div>
                 <div class="stat-label">Total Agents</div>
             </div>
             <div class="stat">
@@ -163,7 +164,7 @@
                 <div class="stat-label">Online</div>
             </div>
             <div class="stat">
-                <div class="stat-number">1</div>
+                <div class="stat-number">2</div>
                 <div class="stat-label">In Progress</div>
             </div>
             <div class="stat">
@@ -208,6 +209,18 @@
                 <div class="desc">Architecture governance, risk assessment, and technical roadmap sign-off.</div>
                 <div class="agent-links">
                     <a class="link-doc" href="markdown-renderer.html?file=.bmad-core/agents/cto.md">Definition</a>
+                </div>
+            </div>
+
+            <div class="agent-card security">
+                <span class="agent-status" style="background:#f8d7da; color:#721c24;">🛡️ Learning</span>
+                <div class="agent-icon">🔐</div>
+                <h3>Security</h3>
+                <div class="role">🛡️ Guardian & Threat Sentinel</div>
+                <div class="desc">Continuously monitors, learns, and hardens the entire BMAD environment — from Hermes down to every JSON source.</div>
+                <div class="agent-links">
+                    <a class="link-doc" href="markdown-renderer.html?file=.bmad-core/agents/security.md">Definition</a>
+                    <a class="link-preview" href="index.html#hermes-agent">Preview</a>
                 </div>
             </div>
 

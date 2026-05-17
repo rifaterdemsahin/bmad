@@ -3,5 +3,6 @@
     {"id": "ag2", "name": "🏗️ Architect", "category": "Agent", "details": "Technical systems and BMAD architecture design for clients."},
     {"id": "ag3", "name": "⚡ Hermes (Orchestrator)", "category": "Agent", "details": "Workflow coordination and agent management across enterprise deployments."},
     {"id": "ag4", "name": "📋 Product Manager", "category": "Agent", "details": "PRDs, epics, and user stories for Auto Complete by trained models."},
-    {"id": "ag5", "name": "💻 Developer", "category": "Agent", "details": "Implementation and bug fixing for BMAD showcase systems."}
+    {"id": "ag5", "name": "💻 Developer", "category": "Agent", "details": "Implementation and bug fixing for BMAD showcase systems."},
+    {"id": "ag6", "name": "🔐 Security", "category": "Agent", "details": "Continuously monitors, learns, and hardens the entire BMAD environment from Hermes to every JSON source."}
 ]

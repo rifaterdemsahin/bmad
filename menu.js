@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="markdown-renderer.html?file=.bmad-core/agents/dashboards.md">📊 Dashboards</a></li>
                     <li><a href="markdown-renderer.html?file=.bmad-core/agents/content.md">✍️ Content</a></li>
                     <li><a href="markdown-renderer.html?file=.bmad-core/agents/coach.md">🎯 Coach</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/security.md">🔐 Security</a></li>
                 </ul>
             </li>
             <li class="dropdown">
