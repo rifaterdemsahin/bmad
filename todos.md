@@ -4,6 +4,34 @@
 
 ---
 
+### 0. Obsidian Knowledge Base Setup 🧠
+**Priority:** High  
+**Status:** ⏳ Partially Complete
+
+**Objective:** All BMAD team members must have a local Obsidian vault configured as their personal knowledge base and long-term memory system.
+
+**Stakeholders:**
+- **Rifat Erdem Sahin** ✅ — Setup completed. Vault initialized with BMAD templates, daily notes structure, and agent prompts library.
+- **Chidi Oparah** 🔲 — Setup pending. Needs to:
+  - [ ] Install Obsidian Desktop (Mac/Windows)
+  - [ ] Create vault in `~/Documents/BMAD-Vault`
+  - [ ] Install core plugins: Dataview, Templater, Git
+  - [ ] Clone shared templates from `bmad-in-a-box/templates/obsidian/`
+  - [ ] Configure daily notes hotkey (`Cmd/Ctrl + D`)
+  - [ ] Test first daily note entry
+
+**Shared Templates:**
+| Template | Purpose |
+|----------|---------|
+| `daily.md` | Morning brief + task log + reflection |
+| `agent-prompt.md` | Reusable Claude/GPT prompt blocks |
+| `architecture-decision.md` | ADR format for BMAD changes |
+| `stakeholder-sync.md` | Pre/post meeting notes |
+
+**Success Metric:** Both Chidi and Rifat have synced daily notes for 7 consecutive days.
+
+---
+
 ### 1. Claude 101 Certification
 **Priority:** High  
 **Status:** ⏳ In Progress  

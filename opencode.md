@@ -53,3 +53,21 @@ The core implementation demonstrates how trained AI models can power real-time e
 ---
 
 > *"Transforming legacy enterprises into agentic AI architectures, one paperclip at a time."* 📎✨
+
+---
+
+## 🧠 Team Memory — Obsidian Knowledge Base
+
+**Remember:** The BMAD team uses **Obsidian** as the shared long-term memory layer. Every architecture decision, agent prompt, and stakeholder interaction is captured in a personal vault and synced via Git.
+
+| Team Member | Obsidian Status | Vault Location |
+|-------------|-----------------|----------------|
+| **Rifat Erdem Sahin** | ✅ Setup Complete | `~/Documents/BMAD-Vault` |
+| **Chidi Oparah** | ⏳ Pending Setup | TBD |
+
+**Key Rituals:**
+1. **Morning Brief** — Daily note auto-generated via Templater
+2. **Agent Prompt Log** — Every Claude/OpenCode interaction is copy-pasted into `prompts/`
+3. **Weekly Sync** — Friday export of vault highlights to the shared kanban
+
+**This is our system. This is our memory. Do not lose it.**
