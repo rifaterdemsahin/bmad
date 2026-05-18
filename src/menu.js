@@ -49,24 +49,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-trigger">📝 Docs ▾</a>
+                <a href="#" class="dropdown-trigger">🤖 LLM Providers ▾</a>
                 <ul class="dropdown-content">
-                    <li><a href="markdown-renderer.html?file=README.md">📘 README</a></li>
-                    <li><a href="markdown-renderer.html?file=opencode.md">🚀 OpenCode</a></li>
-                    <li><a href="markdown-renderer.html?file=claude.md">🎯 Claude</a></li>
-                    <li><a href="markdown-renderer.html?file=GEMINI.md">✨ Gemini</a></li>
-                    <li><a href="markdown-renderer.html?file=release.md">🚀 Release</a></li>
+                    <li><a href="markdown-renderer.html?file=docs/providers/claude.md">🎯 Claude</a></li>
+                    <li><a href="markdown-renderer.html?file=docs/providers/gemini.md">✨ Gemini</a></li>
+                    <li><a href="markdown-renderer.html?file=docs/providers/openai.md">🤖 OpenAI</a></li>
+                    <li><a href="markdown-renderer.html?file=docs/providers/opencode.md">🚀 OpenCode</a></li>
                 </ul>
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-trigger">📚 Resources ▾</a>
                 <ul class="dropdown-content">
-                    <li><a href="markdown-renderer.html?file=formula_bmad.md">🔥 Formula BMAD</a></li>
-                    <li><a href="markdown-renderer.html?file=formula_model.md">🧠 Formula Model</a></li>
-                    <li><a href="markdown-renderer.html?file=todos.md">✅ Todos</a></li>
-                    <li><a href="markdown-renderer.html?file=formula_substack.md">📬 Formula Substack</a></li>
-                    <li><a href="markdown-renderer.html?file=agentic-cto-substack-plan.md">🎯 Agentic CTO Plan</a></li>
-                    <li><a href="markdown-renderer.html?file=chidi-setup.md">🚀 Chidi Setup Guide</a></li>
+                    <li class="dropdown-header">Formulas</li>
+                    <li><a href="markdown-renderer.html?file=resources/formulas/bmad.md">🔥 BMAD Formula</a></li>
+                    <li><a href="markdown-renderer.html?file=resources/formulas/model.md">🧠 Model Formula</a></li>
+                    <li><a href="markdown-renderer.html?file=resources/formulas/substack.md">📬 Substack Formula</a></li>
+                    <li class="dropdown-header">Guides & Plans</li>
+                    <li><a href="markdown-renderer.html?file=resources/guides/chidi-setup.md">🚀 Chidi Setup</a></li>
+                    <li><a href="markdown-renderer.html?file=resources/guides/cto-plan.md">📅 CTO Plan</a></li>
+                    <li><a href="markdown-renderer.html?file=resources/guides/agent-showcase.md">🎭 Agent Showcase</a></li>
+                    <li class="dropdown-header">Management</li>
+                    <li><a href="markdown-renderer.html?file=resources/tasks/todos.md">✅ Todos</a></li>
+                    <li><a href="markdown-renderer.html?file=release.md">🚀 Release Log</a></li>
+                    <li><a href="markdown-renderer.html?file=README.md">📘 README</a></li>
                 </ul>
             </li>
         </ul>

@@ -2,6 +2,16 @@
 
 This document tracks the evolution of the BMAD Showcase project.
 
+## [v0.7.0] - 2026-05-18
+### Added
+- **LLM Providers Documentation**: Created a dedicated `docs/providers/` directory focusing on real-time AI providers (Claude, Gemini, OpenAI, OpenCode).
+- **Categorized Resources**: Reorganized all resource files into logical sub-folders: `resources/formulas/`, `resources/guides/`, and `resources/tasks/`.
+- **Integrated Navigation**: Merged and refined the "Docs" and "Resources" menus into a more structured "LLM Providers" and "Resources" (with category headers) system.
+
+### Changed
+- **Folder Structure**: Significant migration of root-level Markdown files into a nested directory structure for better scalability.
+- **UI/UX**: Added `dropdown-header` styling to improve the readability of categorized menus.
+
 ## [v0.6.0] - 2026-05-18
 ### Added
 - **Humanized Agents**: Assigned unique human names to the entire BMAD Core Agent team (Analyst/Mary, CTO/Chidi, Architect/Rifat, etc.).
