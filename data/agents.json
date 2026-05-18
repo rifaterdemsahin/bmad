@@ -1,8 +1,8 @@
 [
-    {"id": "ag1", "name": "🧠 Mary (Analyst)", "category": "Agent", "details": "Market research and competitive analysis for enterprise data models."},
-    {"id": "ag2", "name": "🏗️ Architect", "category": "Agent", "details": "Technical systems and BMAD architecture design for clients."},
-    {"id": "ag3", "name": "⚡ Hermes (Orchestrator)", "category": "Agent", "details": "Workflow coordination and agent management across enterprise deployments."},
-    {"id": "ag4", "name": "📋 Product Manager", "category": "Agent", "details": "PRDs, epics, and user stories for Auto Complete by trained models."},
-    {"id": "ag5", "name": "💻 Developer", "category": "Agent", "details": "Implementation and bug fixing for BMAD showcase systems."},
-    {"id": "ag6", "name": "🔐 Security", "category": "Agent", "details": "Continuously monitors, learns, and hardens the entire BMAD environment from Hermes to every JSON source."}
+    {"id": "ag1", "name": "🧠 Mary (Analyst)", "category": "Agent", "details": "Market research and competitive analysis for enterprise data models.", "url": "markdown-renderer.html?file=.bmad-core/agents/analyst.md"},
+    {"id": "ag2", "name": "🏗️ Architect", "category": "Agent", "details": "Technical systems and BMAD architecture design for clients.", "url": "markdown-renderer.html?file=.bmad-core/agents/architect.md"},
+    {"id": "ag3", "name": "⚡ Hermes (Orchestrator)", "category": "Agent", "details": "Workflow coordination and agent management across enterprise deployments.", "url": "markdown-renderer.html?file=.bmad-core/agents/bmad-orchestrator.md"},
+    {"id": "ag4", "name": "📋 Product Manager", "category": "Agent", "details": "PRDs, epics, and user stories for Auto Complete by trained models.", "url": "markdown-renderer.html?file=.bmad-core/agents/transformation.md"},
+    {"id": "ag5", "name": "💻 Developer", "category": "Agent", "details": "Implementation and bug fixing for BMAD showcase systems.", "url": "markdown-renderer.html?file=.bmad-core/agents/pipeline.md"},
+    {"id": "ag6", "name": "🔐 Security", "category": "Agent", "details": "Continuously monitors, learns, and hardens the entire BMAD environment from Hermes to every JSON source.", "url": "markdown-renderer.html?file=.bmad-core/agents/security.md"}
 ]

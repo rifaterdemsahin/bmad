@@ -149,9 +149,11 @@ document.addEventListener('DOMContentLoaded', function() {
             div.onclick = () => {
                 searchInput.value = item.name;
                 resultsContainer.style.display = 'none';
-                // If it's a file, we could potentially navigate to it
-                // For now, just log or alert
-                console.log(`Selected: ${item.name}`);
+                if (item.url) {
+                    window.location.href = item.url;
+                } else {
+                    console.log(`Selected: ${item.name}`);
+                }
             };
             resultsContainer.appendChild(div);
         });

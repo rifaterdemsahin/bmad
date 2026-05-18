@@ -78,6 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchInput.value = item.name;
                 resultsContainer.style.display = 'none';
                 logToConsole(`Selected: ${item.name} (${item.category})`);
+                if (item.url) {
+                    setTimeout(() => {
+                        window.location.href = item.url;
+                    }, 500);
+                }
             };
             resultsContainer.appendChild(div);
         });
