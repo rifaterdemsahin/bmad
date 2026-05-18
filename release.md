@@ -2,6 +2,14 @@
 
 This document tracks the evolution of the BMAD Showcase project.
 
+## [v0.6.0] - 2026-05-18
+### Added
+- **Humanized Agents**: Assigned unique human names to the entire BMAD Core Agent team (Analyst/Mary, CTO/Chidi, Architect/Rifat, etc.).
+- **Enhanced Navigation**: Updated the shared menu dropdown to display human names next to agent roles for better user connection.
+
+### Changed
+- **Architecture Documentation**: Updated the agent team table in `architecture.md` with the new human name mappings.
+
 ## [v0.5.0] - 2026-05-18
 ### Added
 - **Infrastructure**: Documented support for **Fly.io** and Local environments in `architecture.md`.

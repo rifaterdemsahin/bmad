@@ -27,15 +27,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="#" class="dropdown-trigger">🤖 BMAD Agents ▾</a>
                 <ul class="dropdown-content">
                     <li><a href="markdown-renderer.html?file=.bmad-core/agents/analyst.md">🧠 Mary (Analyst)</a></li>
-                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/architect.md">🏗️ Architect</a></li>
-                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/bmad-orchestrator.md">⚡ Orchestrator</a></li>
-                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/cto.md">👨‍💼 CTO</a></li>
-                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/transformation.md">🔄 Transformation</a></li>
-                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/pipeline.md">🛠️ Pipeline</a></li>
-                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/dashboards.md">📊 Dashboards</a></li>
-                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/content.md">✍️ Content</a></li>
-                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/coach.md">🎯 Coach</a></li>
-                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/security.md">🔐 Security</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/architect.md">🏗️ Rifat (Architect)</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/cto.md">👨‍💼 Chidi (CTO)</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/security.md">🔐 Sarah (Security)</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/bmad-orchestrator.md">⚡ Hermes (Orchestrator)</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/transformation.md">🔄 Leo (Transformation)</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/pipeline.md">🛠️ Alex (Pipeline)</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/dashboards.md">📊 Elena (Dashboards)</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/content.md">✍️ Maya (Content)</a></li>
+                    <li><a href="markdown-renderer.html?file=.bmad-core/agents/coach.md">🎯 Sam (Coach)</a></li>
                 </ul>
             </li>
             <li class="dropdown">

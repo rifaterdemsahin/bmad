@@ -70,18 +70,18 @@ graph TD
 
 The project utilizes a multi-agent swarm, each with specialized personas:
 
-| Agent | Emoji | Role | Color |
-|-------|-------|------|-------|
-| **Analyst** | 🧠 | Market research & ROI analysis | `Blue` |
-| **Architect** | 🏗️ | System design & blueprinting | `Green` |
-| **CTO** | 👔 | Technical strategy & governance | `Purple` |
-| **Security** | 🛡️ | Compliance & data protection | `Red` |
-| **Orchestrator** | ⚡ | Task routing & coordination | `Orange` |
-| **Pipeline** | ⛓️ | CI/CD & automation | `Grey` |
-| **Transformation**| 🔄 | Change management & adoption | `Teal` |
-| **Coach** | 🏁 | Team alignment & methodology | `Gold` |
-| **Content** | 📝 | Knowledge base & documentation | `Brown` |
-| **Dashboards** | 📊 | Visualizations & reporting | `Navy` |
+| Agent | Emoji | Human Name | Role | Color |
+|-------|-------|------------|------|-------|
+| **Analyst** | 🧠 | Mary | Market research & ROI analysis | `Blue` |
+| **Architect** | 🏗️ | Rifat | System design & blueprinting | `Green` |
+| **CTO** | 👔 | Chidi | Technical strategy & governance | `Purple` |
+| **Security** | 🛡️ | Sarah | Compliance & data protection | `Red` |
+| **Orchestrator** | ⚡ | Hermes | Task routing & coordination | `Orange` |
+| **Pipeline** | ⛓️ | Alex | CI/CD & automation | `Grey` |
+| **Transformation**| 🔄 | Leo | Change management & adoption | `Teal` |
+| **Coach** | 🏁 | Sam | Team alignment & methodology | `Gold` |
+| **Content** | 📝 | Maya | Knowledge base & documentation | `Brown` |
+| **Dashboards** | 📊 | Elena | Visualizations & reporting | `Navy` |
 
 ---
 
