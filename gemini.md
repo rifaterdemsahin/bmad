@@ -21,32 +21,28 @@ Paperclip Co. is currently working on creating **data models for other enterpris
 
 ---
 
-## 🤖 Auto Complete by Trained Models
+## 🛠️ Features & Implementation
 
+### 📱 Responsive Shared Menu
+The project features a **centralized navigation system** (`menu.js`) shared across all pages.
+- **Responsive Design:** Hamburger menu for mobile devices.
+- **Integrated Search:** Global search bar that indexes enterprise JSON data sources.
+- **Dynamic Dropdowns:** Categorized access to agents, data sources, and documentation.
+
+### 🤖 Auto Complete by Trained Models
 The core implementation demonstrates how trained AI models can power real-time enterprise autocomplete:
-
-- 🔍 **Smart Search** across agents, stakeholders, and business data
-- 📈 **ROI Predictive Models** for production margin analysis
-- 🧠 **Hermes Orchestrator** coordinating multi-agent workflows
-- 🔄 **Real-time Data Sync** across decentralized JSON sources
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Frontend | 🌐 Vanilla JS + CSS |
-| Data | 📁 JSON Data Sources |
-| Orchestration | ⚡ Hermes Agent |
-| Agents | 🧠 BMAD Core Agents |
+- 🔍 **Smart Search** across agents, stakeholders, and business data.
+- 📈 **ROI Predictive Models** for production margin analysis.
+- 🧠 **Hermes Orchestrator** coordinating multi-agent workflows.
 
 ---
 
 ## 📂 Key Files
 
 - `index.html` — 🖥️ Enterprise Dashboard
-- `app.js` — ⚙️ Autocomplete & ROI Engine
+- `menu.js` — 🛠️ Shared Menu & Search Logic
+- `style.css` — 🎨 Responsive Styles
+- `app.js` — ⚙️ Dashboard Logic & ROI Engine
 - `architecture.md` — 🏗️ System Blueprint
 - `.bmad-core/agents/` — 🤖 Agent Definitions
 
