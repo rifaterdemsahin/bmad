@@ -53,6 +53,7 @@ The core implementation demonstrates how trained AI models can power real-time e
 
 - `index.html` — 🖥️ Enterprise Dashboard
 - `app.js` — ⚙️ Autocomplete & ROI Engine
+- `dsl.md` — 📖 Domain Specific Language (DSL)
 - `architecture.md` — 🏗️ System Blueprint
 - `.bmad-core/agents/` — 🤖 Agent Definitions
 

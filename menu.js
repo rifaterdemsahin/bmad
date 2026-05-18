@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <li><a href="markdown-renderer.html?file=architecture.md">🏗️ Architecture</a></li>
             <li><a href="kanban.html">📋 Kanban</a></li>
             <li><a href="agents.html">🤖 Agents</a></li>
-            <li><a href="markdown-renderer.html?file=dictionary.md">📖 Dictionary</a></li>
+            <li><a href="markdown-renderer.html?file=dsl.md">📖 DSL</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-trigger">🤖 BMAD Agents ▾</a>
                 <ul class="dropdown-content">

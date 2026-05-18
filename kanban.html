@@ -32,6 +32,7 @@
             border-radius: 4px;
             text-align: center;
         }
+        .column-backlog .kanban-column-header { background: #7f8c8d; color: white; }
         .column-todo .kanban-column-header { background: #e74c3c; color: white; }
         .column-progress .kanban-column-header { background: #f39c12; color: white; }
         .column-review .kanban-column-header { background: #3498db; color: white; }
@@ -112,6 +113,38 @@
 
     <main>
         <div class="kanban-board">
+            <!-- Backlog Column -->
+            <div class="kanban-column column-backlog">
+                <div class="kanban-column-header">📋 Backlog</div>
+                <div class="kanban-drop-zone" data-status="backlog">
+                    <div class="kanban-card" draggable="true" data-task-id="14">
+                        <h4>Fly.io Agent Deployment</h4>
+                        <p>Configure fly.toml and deploy BMAD agents to Fly.io</p>
+                        <span class="tag tag-high">High Priority</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="15">
+                        <h4>End-to-End BMAD Demo</h4>
+                        <p>Create a demonstration script showing the full lifecycle from Business to Design</p>
+                        <span class="tag tag-high">High Priority</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="16">
+                        <h4>Local Agent Runtime</h4>
+                        <p>Ensure agents can run locally with zero-config for offline development</p>
+                        <span class="tag tag-medium">Medium Priority</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="17">
+                        <h4>Automated DSL Validation</h4>
+                        <p>Implement a script to validate dsl.md against JSON data sources</p>
+                        <span class="tag tag-medium">Medium Priority</span>
+                    </div>
+                    <div class="kanban-card" draggable="true" data-task-id="18">
+                        <h4>Fly.io Secrets Management</h4>
+                        <p>Securely manage API keys and credentials on Fly.io using 'fly secrets'</p>
+                        <span class="tag tag-high">High Priority</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- To Do Column -->
             <div class="kanban-column column-todo">
                 <div class="kanban-column-header">🔲 To Do</div>

@@ -1,4 +1,4 @@
-# BMAD Dictionary / Glossary 📖
+# BMAD DSL (Domain Specific Language) / Glossary 📖
 
 ## Unique Terms & Concepts
 

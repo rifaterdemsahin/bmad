@@ -41,6 +41,7 @@ The core implementation demonstrates how trained AI models can power real-time e
 
 - `index.html` — 🖥️ Enterprise Dashboard
 - `menu.js` — 🛠️ Shared Menu & Search Logic
+- `dsl.md` — 📖 Domain Specific Language (DSL)
 - `style.css` — 🎨 Responsive Styles
 - `app.js` — ⚙️ Dashboard Logic & ROI Engine
 - `architecture.md` — 🏗️ System Blueprint
