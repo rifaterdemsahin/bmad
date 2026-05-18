@@ -1,0 +1,37 @@
+[
+    {
+        "id": "skill-pptx-automation",
+        "name": "PPTX Automation",
+        "category": "Enterprise Skill",
+        "details": "Automates the creation of branded Paperclip Co. decks from BMAD artifacts.",
+        "provider": "Anthropic"
+    },
+    {
+        "id": "skill-terraform-audit",
+        "name": "Terraform Compliance Audit",
+        "category": "Enterprise Skill",
+        "details": "Scans infrastructure code for BMAD architectural compliance and security.",
+        "provider": "HashiCorp"
+    },
+    {
+        "id": "skill-roi-analyzer",
+        "name": "ROI Strategic Analyzer",
+        "category": "Enterprise Skill",
+        "details": "Advanced predictive modeling for enterprise-wide ROI on AI transformation.",
+        "provider": "BMAD Core"
+    },
+    {
+        "id": "skill-gh-ci-fixer",
+        "name": "GitHub CI/CD Auto-Fixer",
+        "category": "Enterprise Skill",
+        "details": "Autonomously proposes fixes for failing CI/CD checks in the Paperclip Co. repo.",
+        "provider": "OpenAI"
+    },
+    {
+        "id": "skill-design-review",
+        "name": "Design System Reviewer",
+        "category": "Enterprise Skill",
+        "details": "Ensures all UI components adhere to the Paperclip Co. Design Pillar standards.",
+        "provider": "Microsoft"
+    }
+]

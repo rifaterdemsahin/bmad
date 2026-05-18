@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'data/architecture.json',
         'data/design.json',
         'data/agents.json',
-        'data/stakeholders.json'
+        'data/stakeholders.json',
+        'data/skills.json'
     ];
 
     // ROI Model Logic
@@ -38,11 +39,42 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(dataArrays => {
             enterpriseData = dataArrays.flat();
             logToConsole('Enterprise data sources indexed successfully.');
+            renderSkillMenu(dataArrays[6]); // data/skills.json is at index 6
         })
         .catch(err => {
             console.error('Error loading data:', err);
             logToConsole('Error: Failed to index data sources.', 'error');
         });
+
+    function renderSkillMenu(skills) {
+        const skillMenu = document.getElementById('skill-menu');
+        if (!skillMenu) return;
+        
+        skillMenu.innerHTML = '';
+        skills.forEach(skill => {
+            const card = document.createElement('div');
+            card.className = 'skill-card';
+            card.innerHTML = `
+                <h3>${skill.name}</h3>
+                <p>${skill.details}</p>
+                <div class="skill-footer">
+                    <span>${skill.provider}</span>
+                    <button onclick="window.executeSkill('${skill.id}')">Execute</button>
+                </div>
+            `;
+            skillMenu.appendChild(card);
+        });
+    }
+
+    window.executeSkill = (skillId) => {
+        const skill = enterpriseData.find(s => s.id === skillId);
+        if (!skill) return;
+
+        logToConsole(`Executing Skill: ${skill.name}...`);
+        setTimeout(() => {
+            logToConsole(`Skill [${skill.name}] completed successfully. Artifacts generated.`);
+        }, 1500);
+    };
 
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase();
