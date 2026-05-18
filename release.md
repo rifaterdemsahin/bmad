@@ -2,6 +2,18 @@
 
 This document tracks the evolution of the BMAD Showcase project.
 
+## [v0.5.0] - 2026-05-18
+### Added
+- **Infrastructure**: Documented support for **Fly.io** and Local environments in `architecture.md`.
+- **BMAD Core Agent Team**: Detailed agent swarm personas with emojis and color-coding.
+- **Enterprise Skill Menu**: Dynamic menu in `index.html` for executing specialized agent skills.
+- **Sanity Check Skill**: New `bmad-sanity-check` skill for automated project auditing.
+- `data/skills.json` to power the skill menu.
+
+### Changed
+- **Architecture Diagram**: Enhanced Mermaid diagram with infrastructure subgraphs and color styles.
+- **System Documentation**: Comprehensive updates to `architecture.md` to reflect real-world agentic workflows.
+
 ## [v0.4.0] - 2026-05-18
 ### Added
 - `release.md` for version tracking.

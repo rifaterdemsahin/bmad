@@ -1,6 +1,6 @@
 # 🏗️ Paperclip Co. System Architecture
 
-This document outlines the high-level architecture of the **Paperclip Co. Enterprise BMAD Portal**, highlighting the integration between the frontend, the data sources, and the **Hermes Orchestrator**.
+This document outlines the high-level architecture of the **Paperclip Co. Enterprise BMAD Portal**, highlighting the integration between the frontend, the data sources, the **Hermes Orchestrator**, and the underlying infrastructure.
 
 ---
 
@@ -10,30 +10,78 @@ This is a **BMAD (Business Model Architecture Design) showcase project** 🧷. P
 
 ---
 
+## 🌐 Infrastructure & Deployment
+
+The system is designed for high availability and low latency, supporting both cloud and edge environments:
+
+- 🚀 **Cloud (Production)**: Hosted on **Fly.io** 🎈. Leveraging globally distributed Firecracker microVMs for rapid scaling and proximity to users.
+- 💻 **Local (Development)**: Fully containerized environment for local execution, ensuring parity between dev and prod.
+- 🔒 **Security**: End-to-end TLS and isolated runtime environments for AI agents.
+
+---
+
 ## 📊 System Overview Diagram
 
 ```mermaid
 graph TD
     User((User)) -->|Interacts| UI[Web Interface / Dashboard]
-    UI -->|Queries| Autocomplete[Autocomplete Engine]
-    Autocomplete -->|Fetches| Data[(JSON Data Sources)]
-    Data --> Business[Business Data]
-    Data --> Model[Model Data]
-    Data --> Architecture[Architecture Data]
-    Data --> Design[Design Data]
-    Data --> Agents[BMAD Agents]
-    Data --> Stakeholders[Stakeholders]
-
-    UI -->|Triggers| Hermes[Hermes Orchestrator]
-    Hermes -->|Processes| ROI[ROI Predictive Model]
-    Hermes -->|Generates| Insights[Strategic Insights]
     
-    subgraph BMAD Core
-        BMAD_Agents[.bmad-core/agents]
+    subgraph Infrastructure [Fly.io / Local]
+        direction TB
+        UI
+        Hermes[Hermes Orchestrator]
+        Data[(JSON Data Sources)]
+    end
+
+    UI -->|Queries| Autocomplete[Autocomplete Engine]
+    Autocomplete -->|Fetches| Data
+    
+    Data --> Business[💼 Business Data]
+    Data --> Model[📊 Model Data]
+    Data --> Architecture[🏗️ Architecture Data]
+    Data --> Design[🎨 Design Data]
+    Data --> Agents[🤖 BMAD Agents]
+    Data --> Stakeholders[👥 Stakeholders]
+
+    UI -->|Triggers| Hermes
+    Hermes -->|Processes| ROI[📈 ROI Predictive Model]
+    Hermes -->|Generates| Insights[💡 Strategic Insights]
+    
+    subgraph BMAD_Core [BMAD Core Agents]
+        Analyst[🧠 Analyst]
+        Architect[🏗️ Architect]
+        CTO[👔 CTO]
+        Security[🛡️ Security]
+        Pipeline[⛓️ Pipeline]
     end
     
-    Hermes -->|Loads| BMAD_Agents
+    Hermes -->|Orchestrates| BMAD_Core
+
+    %% Colors
+    style UI fill:#3498db,stroke:#2980b9,color:#fff
+    style Hermes fill:#e67e22,stroke:#d35400,color:#fff
+    style BMAD_Core fill:#f1f1f1,stroke:#ccc,color:#333
+    style Infrastructure fill:#ecf0f1,stroke:#bdc3c7,color:#2c3e50
 ```
+
+---
+
+## 🤖 BMAD Core Agent Team
+
+The project utilizes a multi-agent swarm, each with specialized personas:
+
+| Agent | Emoji | Role | Color |
+|-------|-------|------|-------|
+| **Analyst** | 🧠 | Market research & ROI analysis | `Blue` |
+| **Architect** | 🏗️ | System design & blueprinting | `Green` |
+| **CTO** | 👔 | Technical strategy & governance | `Purple` |
+| **Security** | 🛡️ | Compliance & data protection | `Red` |
+| **Orchestrator** | ⚡ | Task routing & coordination | `Orange` |
+| **Pipeline** | ⛓️ | CI/CD & automation | `Grey` |
+| **Transformation**| 🔄 | Change management & adoption | `Teal` |
+| **Coach** | 🏁 | Team alignment & methodology | `Gold` |
+| **Content** | 📝 | Knowledge base & documentation | `Brown` |
+| **Dashboards** | 📊 | Visualizations & reporting | `Navy` |
 
 ---
 
@@ -41,19 +89,8 @@ graph TD
 
 1. 🖥️ **Frontend (Vanilla JS/CSS)**: Provides a responsive, real-time interface for searching enterprise data and interacting with the Hermes Agent.
 2. 📁 **Data Layer (JSON)**: Decentralized data sources following the BMAD method structure.
-3. ⚡ **Hermes Orchestrator**: An AI-driven service (simulated) that coordinates workflows and executes complex business logic like the ROI Model.
-4. 🧠 **BMAD-METHOD™ Framework**: A set of persona-based agent definitions located in `.bmad-core/agents/`.
-
----
-
-## 🤖 Auto Complete by Trained Models
-
-The portal demonstrates how trained AI models can power real-time enterprise autocomplete:
-
-- 🔍 **Smart Search** across agents, stakeholders, and business data
-- 📈 **ROI Predictive Models** for production margin analysis
-- 🧠 **Hermes Orchestrator** coordinating multi-agent workflows
-- 🔄 **Real-time Data Sync** across decentralized JSON sources
+3. ⚡ **Hermes Orchestrator**: An AI-driven service that coordinates workflows and executes complex business logic like the ROI Model.
+4. 🏗️ **Infrastructure**: Managed deployment on **Fly.io** or local environments.
 
 ---
 
