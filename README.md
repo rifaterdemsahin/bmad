@@ -2,7 +2,17 @@
 
 **Collaborative BMAD Sandbox** setup for a **Paperclip Company** 🧷
 
-> https://youtu.be/4VPoGSeI2sw?si=GS3as3jqH8qlZxYK
+> 📺 [Watch the Introduction Video](https://youtu.be/4VPoGSeI2sw?si=GS3as3jqH8qlZxYK)
+
+---
+
+## 🔗 Quick Links
+
+- 🖥️ [**Enterprise Dashboard**](https://rifaterdemsahin.github.io/bmad/index.html)
+- 🏗️ [**System Architecture**](https://rifaterdemsahin.github.io/bmad/markdown-renderer.html?file=architecture.md)
+- 📖 [**Domain Specific Language (DSL)**](https://rifaterdemsahin.github.io/bmad/markdown-renderer.html?file=dsl.md)
+- 🤖 [**BMAD Core Agents**](https://rifaterdemsahin.github.io/bmad/agents.html)
+- 🚀 [**Latest Release Log**](https://rifaterdemsahin.github.io/bmad/markdown-renderer.html?file=release.md)
 
 ---
 
@@ -49,13 +59,13 @@ The core implementation demonstrates how trained AI models can power real-time e
 
 ---
 
-## 📂 Key Files
+## 📂 Key Documentation
 
-- `index.html` — 🖥️ Enterprise Dashboard
-- `app.js` — ⚙️ Autocomplete & ROI Engine
-- `dsl.md` — 📖 Domain Specific Language (DSL)
-- `architecture.md` — 🏗️ System Blueprint
-- `.bmad-core/agents/` — 🤖 Agent Definitions
+- 🖥️ [Enterprise Dashboard](https://rifaterdemsahin.github.io/bmad/index.html) — Main interface
+- 🏗️ [System Blueprint](https://rifaterdemsahin.github.io/bmad/markdown-renderer.html?file=architecture.md) — Architectural overview
+- 📖 [DSL (Domain Specific Language)](https://rifaterdemsahin.github.io/bmad/markdown-renderer.html?file=dsl.md) — Project vocabulary
+- 🤖 [Agent Definitions](https://rifaterdemsahin.github.io/bmad/agents.html) — Persona-based agents
+- 🚀 [Release Management](https://rifaterdemsahin.github.io/bmad/markdown-renderer.html?file=release.md) — Version tracking
 
 ---
 
