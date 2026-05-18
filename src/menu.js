@@ -1,5 +1,5 @@
 // Shared navigation menu component for all BMAD pages
-// Usage: <div id="shared-menu"></div><script src="menu.js"></script>
+// Usage: <div id="shared-menu"></div><script src="src/menu.js"></script>
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuContainer = document.getElementById('shared-menu');
@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="markdown-renderer.html?file=opencode.md">🚀 OpenCode</a></li>
                     <li><a href="markdown-renderer.html?file=claude.md">🎯 Claude</a></li>
                     <li><a href="markdown-renderer.html?file=GEMINI.md">✨ Gemini</a></li>
+                    <li><a href="markdown-renderer.html?file=release.md">🚀 Release</a></li>
                 </ul>
             </li>
             <li class="dropdown">
