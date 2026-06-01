@@ -207,4 +207,159 @@ bmad-in-a-box/
 
 ---
 
+## Action Items — Added 2026-06-01
+
+### 19. Every-Other-Day AI News Email
+**Priority:** High
+**Status:** 🔲 Not Started
+
+**Objective:** Send curated news and topics about rapid AI increases in skill expectations to Chidi and Rifat every other day. Keeps both informed and aligned on the core problem.
+
+**Recipients:** chidi@paperclipco.com, rifat@paperclipco.com
+**Checklist:**
+- [ ] Define source list (newsletters, LinkedIn, X, Substack, arXiv)
+- [ ] Draft email template tied to core problem narrative
+- [ ] Set up every-other-day reminder / automation
+- [ ] Send first edition
+
+---
+
+### 20. Long-Form Writing Workshop
+**Priority:** Medium
+**Status:** 🔲 Not Started
+
+**Objective:** Run a hands-on workshop where Chidi and Rifat co-write long-form content together — build shared voice and workflow.
+
+**Checklist:**
+- [ ] Pick first topic (core problem / AI skills gap)
+- [ ] Schedule 2-hour writing session
+- [ ] Use collaborative doc (Notion or Google Docs)
+- [ ] Publish output to Substack
+
+---
+
+### 21. Hermes Agent Workshop
+**Priority:** High
+**Status:** 🔲 Not Started
+
+**Objective:** Workshop actual agent use with Hermes to deliver the full BMAD workflow end-to-end — from brief to deliverable.
+
+**Checklist:**
+- [ ] Prepare BMAD workflow demo script
+- [ ] Set up Hermes with a real use case
+- [ ] Run live walkthrough with Chidi and Rifat
+- [ ] Document learnings and gaps
+
+---
+
+### 22. Define New Roles
+**Priority:** High
+**Status:** 🔲 Not Started
+
+**Objective:** Define and document four new BMAD operational roles: Implementer, Planner, Designer, Operator.
+
+**Roles:**
+| Role | Responsibility |
+|------|---------------|
+| Implementer | Executes agent tasks and technical builds |
+| Planner | Owns roadmap, sprints, and prioritization |
+| Designer | UX, content design, and narrative |
+| Operator | Infrastructure, monitoring, and automation |
+
+**Checklist:**
+- [ ] Draft role definitions in DSL
+- [ ] Map roles to existing team members
+- [ ] Update agent prompts to reflect role context
+- [ ] Add to BMAD in a Box onboarding
+
+---
+
+### 23. Automated Content Release Pipeline
+**Priority:** Medium
+**Status:** 🔲 Not Started
+
+**Objective:** Set up an automated release pipeline for the Content Engineer role — from draft to published.
+
+**Checklist:**
+- [ ] Define content release stages (draft → review → publish)
+- [ ] Automate Substack post scheduling
+- [ ] Set up GitHub Actions or n8n workflow
+- [ ] Test with a real piece of content
+
+---
+
+### 24. Enterprise Transformation Research
+**Priority:** High
+**Status:** 🔲 Not Started
+
+**Objective:** Research the problem of enterprises transforming under rapid AI adoption — surface key blockers, risks, and opportunities. Send findings to Chidi and Rifat.
+
+**Recipients:** chidi@paperclipco.com, rifat@paperclipco.com
+**Checklist:**
+- [ ] Identify 5–10 case studies of enterprise AI transformation
+- [ ] Synthesize the core pattern / failure modes
+- [ ] Write 1-page research brief
+- [ ] Email to Chidi and Rifat with discussion questions
+
+---
+
+### 25. Weekly Monday 9am Team Meetings
+**Priority:** Medium
+**Status:** 🔲 Not Started
+
+**Objective:** Establish a recurring Monday 9am BMAD team sync.
+
+**Checklist:**
+- [ ] Create recurring Google Calendar invite
+- [ ] Draft standing agenda template
+- [ ] Define owner for weekly agenda prep
+- [ ] Hold first meeting
+
+---
+
+### 26. Passionate Long-Form Content Focus
+**Priority:** Medium
+**Status:** 🔲 Not Started
+
+**Objective:** Align content strategy around the core problem — AI skills gap in enterprises — with passionate, deep long-form writing rather than shallow posts.
+
+**Checklist:**
+- [ ] Agree on 3 flagship topics to write deeply about
+- [ ] Set a minimum word count / depth standard
+- [ ] Create editorial calendar
+- [ ] Publish first deep-dive piece
+
+---
+
+### 27. Claude Certification
+**Priority:** High
+**Status:** 🔲 Not Started
+
+**Link:** [Claude 101 — Anthropic Skilljar](https://anthropic.skilljar.com/claude-101)
+
+**Objective:** Both Chidi and Rifat complete Claude certification to deepen expertise and credibility.
+
+**Checklist:**
+- [ ] Rifat: enroll and complete certification
+- [ ] Chidi: enroll and complete certification
+- [ ] Share certificates and key learnings
+- [ ] Incorporate learnings into BMAD onboarding
+
+---
+
+### 28. AI Skills Gap Onboarding Program
+**Priority:** High
+**Status:** 🔲 Not Started
+
+**Objective:** Help others get onboarded to fix the AI skills gap — design and run an accessible onboarding program.
+
+**Checklist:**
+- [ ] Define target audience (SMBs, enterprise teams, individuals)
+- [ ] Create 4-module curriculum outline
+- [ ] Build starter kit (templates, prompts, reading list)
+- [ ] Run first cohort of 5–10 participants
+- [ ] Collect feedback and iterate
+
+---
+
 > *"A todo without a deadline is a wish. These have deadlines."* 📎⏰
