@@ -87,6 +87,26 @@
             border-color: #3498db;
             background: #f0f8ff;
         }
+        .task-id-badge {
+            float: right;
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #999;
+            background: #f0f0f0;
+            border-radius: 4px;
+            padding: 1px 5px;
+            margin-left: 6px;
+            font-family: monospace;
+        }
+        .column-count {
+            display: inline-block;
+            background: rgba(255,255,255,0.3);
+            border-radius: 12px;
+            font-size: 0.8rem;
+            padding: 1px 8px;
+            margin-left: 6px;
+            font-weight: 600;
+        }
 
         header {
             background-color: #2c3e50;
@@ -297,6 +317,33 @@
     </footer>
 
     <script>
+        // Inject task ID badge into each card
+        function injectTaskIds() {
+            document.querySelectorAll('.kanban-card[data-task-id]').forEach(card => {
+                if (!card.querySelector('.task-id-badge')) {
+                    const id = card.getAttribute('data-task-id');
+                    const badge = document.createElement('span');
+                    badge.className = 'task-id-badge';
+                    badge.textContent = '#' + id;
+                    card.querySelector('h4').prepend(badge);
+                }
+            });
+        }
+
+        // Update column header counts
+        function updateColumnCounts() {
+            document.querySelectorAll('.kanban-column').forEach(col => {
+                const header = col.querySelector('.kanban-column-header');
+                const count = col.querySelectorAll('.kanban-card').length;
+                const existing = header.querySelector('.column-count');
+                if (existing) existing.remove();
+                const badge = document.createElement('span');
+                badge.className = 'column-count';
+                badge.textContent = count;
+                header.appendChild(badge);
+            });
+        }
+
         // Kanban Drag & Drop Logic
         const cards = document.querySelectorAll('.kanban-card');
         const dropZones = document.querySelectorAll('.kanban-drop-zone');
@@ -308,6 +355,7 @@
             card.addEventListener('dragend', () => {
                 card.classList.remove('dragging');
                 dropZones.forEach(zone => zone.classList.remove('drag-over'));
+                updateColumnCounts();
             });
         });
 
@@ -328,6 +376,9 @@
                 }
             });
         });
+
+        injectTaskIds();
+        updateColumnCounts();
     </script>
 </body>
 </html>
